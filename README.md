@@ -2,4 +2,4 @@
 
 ### This is my website.
 
-Available at https://zasKoda.com 
+https://zasKoda.com 
