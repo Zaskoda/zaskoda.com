@@ -1,0 +1,56 @@
+tagline: |-
+  Small-town-Texas born, nature-loving country boy,
+  accomplished software engineer in gaming and Web,
+  civicly-engaged community building volunteer,
+  living high-tech and wet in the cyberpunk city of Seattle.
+contact_email: koda@zaskoda.com
+social_links:
+  -
+    type: link
+    enabled: true
+    platform: GitHub
+    url: 'https://github.com/zaskoda'
+    icon_id: github
+    label: 'GitHub profile'
+  -
+    type: link
+    enabled: true
+    platform: LinkedIn
+    url: 'https://www.linkedin.com/in/zaskoda'
+    icon_id: linkedin
+    label: 'LinkedIn profile'
+  -
+    type: link
+    enabled: true
+    platform: 'Twitter / X'
+    url: 'https://twitter.com/zaskoda'
+    icon_id: x
+    label: 'Twitter / X profile'
+  -
+    type: link
+    enabled: true
+    platform: Mastodon
+    url: 'https://mastodon.social/@zaskoda'
+    icon_id: mastodon
+    label: 'Mastodon profile'
+  -
+    type: link
+    enabled: true
+    platform: Hackaday
+    url: 'https://hackaday.io/zasKoda'
+    icon_id: hackaday
+    label: 'Hackaday profile'
+  -
+    type: link
+    enabled: true
+    platform: YouTube
+    url: 'https://youtube.com/@zaskoda'
+    icon_id: youtube
+    label: 'YouTube channel'
+  -
+    type: link
+    enabled: true
+    platform: Flickr
+    url: 'https://www.flickr.com/photos/zaskoda'
+    icon_id: flickr
+    label: 'Flickr photos'

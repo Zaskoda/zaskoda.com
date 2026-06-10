@@ -2,3 +2,169 @@
 @plugin "@tailwindcss/typography";
 @source "../views";
 @source "../../content";
+
+@theme {
+    /* Campfire-at-night: near-black page, warm card step, cream text */
+    --color-cowboy-950: #0a0806;
+    --color-cowboy-900: #130f0a;
+    --color-cowboy-800: #241a10;
+    --color-cowboy-700: #2a1e13;
+    --color-cowboy-600: #4a3828;
+    --color-cowboy-500: #7a6040;
+    --color-cowboy-300: #c4a882;
+    --color-cowboy-100: #ede0cc;
+    --color-cowboy-50: #faf5ec;
+
+    /* Copper: links, CTAs, hover, metrics — not headings */
+    --color-copper-700: #9e5820;
+    --color-copper-600: #c4732a;
+    --color-copper-500: #d4854f;
+    --color-copper-400: #e09970;
+    --color-copper-300: #edb898;
+
+    /* Circuit teal: cyber accent, used sparingly */
+    --color-circuit-700: #1e4f5a;
+    --color-circuit-600: #2a6b7a;
+    --color-circuit-500: #3a8a9c;
+    --color-circuit-400: #5aaabb;
+    --color-circuit-300: #8ac8d4;
+
+    --font-display: "Big Shoulders Display", sans-serif;
+    --font-ui: "Space Grotesk", sans-serif;
+    --font-body: "Source Serif 4", serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply bg-cowboy-950 text-cowboy-100 font-ui antialiased;
+}
+
+a {
+    @apply text-copper-500 transition-colors duration-200;
+}
+
+a:hover {
+    @apply text-copper-400;
+    text-shadow: 0 0 12px rgba(58, 138, 156, 0.35);
+}
+
+h1, h2, h3, h4 {
+    @apply text-cowboy-100;
+}
+
+@layer components {
+    .surface-card {
+        @apply bg-cowboy-800 rounded-lg border border-cowboy-600
+               shadow-[0_4px_32px_rgba(0,0,0,0.6)]
+               hover:border-cowboy-500 transition-colors duration-200;
+    }
+
+    .surface-card-alt {
+        @apply bg-cowboy-800/80 rounded-lg border border-cowboy-600
+               shadow-[0_4px_32px_rgba(0,0,0,0.6)]
+               hover:border-cowboy-500 transition-colors duration-200;
+    }
+
+    .section-heading {
+        @apply font-display font-bold text-cowboy-100
+               border-b border-circuit-500/40 pb-3 mb-6;
+    }
+
+    .page-heading {
+        @apply font-display font-bold text-5xl md:text-6xl text-cowboy-100;
+    }
+
+    .body-copy {
+        @apply font-body text-cowboy-100 leading-relaxed;
+    }
+
+    .meta-text {
+        @apply font-ui text-cowboy-500;
+    }
+
+    .metric-highlight {
+        @apply text-copper-500 font-semibold;
+    }
+
+    .badge-tech {
+        @apply font-ui text-xs px-2 py-0.5 rounded
+               border border-circuit-500/60 text-circuit-400 bg-circuit-700/20;
+    }
+
+    .badge-warm {
+        @apply font-ui text-xs px-2 py-0.5 rounded
+               border border-cowboy-500 text-cowboy-300 bg-cowboy-900/50;
+    }
+
+    .inline-photo {
+        @apply rounded-lg border border-cowboy-600 shadow-[0_8px_32px_rgba(0,0,0,0.5)] my-8 w-full;
+    }
+
+    .inline-photo-caption {
+        @apply font-ui text-xs text-cowboy-500 text-center mt-2;
+    }
+
+    .nav-link {
+        @apply font-ui text-sm text-cowboy-100 px-2.5 py-1.5 rounded-md
+               transition-colors duration-200;
+    }
+
+    .nav-link:hover {
+        @apply text-copper-400 bg-cowboy-800/60 no-underline;
+        text-shadow: 0 0 10px rgba(58, 138, 156, 0.3);
+    }
+
+    .nav-link--active {
+        @apply text-copper-400 font-medium bg-cowboy-800/40 no-underline;
+        box-shadow: inset 0 -2px 0 var(--color-copper-500);
+    }
+
+    .nav-link--active:hover {
+        @apply text-copper-300 bg-cowboy-800/60;
+    }
+
+    .nav-link-mobile {
+        @apply block font-ui text-cowboy-100 px-3 py-2 rounded-md
+               border-l-2 border-transparent transition-colors duration-200;
+    }
+
+    .nav-link-mobile:hover {
+        @apply text-copper-400 bg-cowboy-800/50 border-cowboy-600 no-underline;
+    }
+
+    .nav-link-mobile--active {
+        @apply text-copper-400 font-medium border-copper-500 bg-cowboy-800/40 no-underline;
+    }
+
+    .nav-link-mobile--active:hover {
+        @apply text-copper-300 bg-cowboy-800/60;
+    }
+
+    .footer-scrim {
+        @apply rounded-xl px-8 py-10;
+        background: rgba(10, 8, 6, 0.62);
+        backdrop-filter: blur(6px);
+    }
+
+    .btn-cta {
+        @apply inline-block font-ui text-lg px-8 py-4 rounded
+               border-2 border-copper-500 text-copper-400
+               hover:bg-copper-600 hover:text-cowboy-50 hover:border-copper-400
+               transition-all duration-200;
+    }
+}
+
+.prose.prose-invert {
+    --tw-prose-body: var(--color-cowboy-100);
+    --tw-prose-headings: var(--color-cowboy-100);
+    --tw-prose-bold: var(--color-cowboy-100);
+    --tw-prose-links: var(--color-copper-500);
+    --tw-prose-counters: var(--color-cowboy-500);
+    --tw-prose-bullets: var(--color-cowboy-500);
+    --tw-prose-hr: var(--color-cowboy-600);
+    --tw-prose-quotes: var(--color-cowboy-100);
+    --tw-prose-quote-borders: var(--color-circuit-500);
+}

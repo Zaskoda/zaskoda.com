@@ -1,0 +1,9 @@
+title: Posts
+template: posts/show
+layout: layout
+route: 'blog/{slug}'
+date: true
+date_behavior:
+  past: public
+  future: private
+sort_dir: desc

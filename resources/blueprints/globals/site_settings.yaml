@@ -1,0 +1,52 @@
+title: 'Site Settings'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: tagline
+            field:
+              type: textarea
+              display: 'Personal Tagline (footer)'
+          -
+            handle: contact_email
+            field:
+              type: text
+              input_type: email
+              display: 'Contact Email'
+          -
+            handle: social_links
+            field:
+              type: replicator
+              display: 'Social Links'
+              sets:
+                main:
+                  display: Links
+                  sets:
+                    link:
+                      display: 'Social Link'
+                      fields:
+                        -
+                          handle: platform
+                          field:
+                            type: text
+                            display: 'Platform Name'
+                        -
+                          handle: url
+                          field:
+                            type: text
+                            input_type: url
+                            display: URL
+                        -
+                          handle: icon_id
+                          field:
+                            type: text
+                            display: 'Icon Identifier'
+                            instructions: 'Matches an icon in the social-icons partial: github, linkedin, x, mastodon, hackaday, youtube, flickr'
+                        -
+                          handle: label
+                          field:
+                            type: text
+                            display: 'Accessible Label'

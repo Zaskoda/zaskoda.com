@@ -1,3 +1,13 @@
 tree:
   -
     entry: home
+  -
+    entry: page-work
+  -
+    entry: page-projects
+  -
+    entry: page-blog
+  -
+    entry: page-about
+  -
+    entry: page-contact

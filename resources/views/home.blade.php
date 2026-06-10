@@ -1,3 +1,10 @@
-<article class="mt-4 bg-white dark:bg-zinc-950 p-8 shadow-xl rounded-2xl max-w-xl prose prose-zinc dark:prose-invert [&_a]:text-indigo-700 dark:[&_a]:text-indigo-400">
-    {!! Statamic\Support\Str::widont($content ?? '') !!}
-</article>
+@extends('layout')
+
+@section('content')
+    @include('partials.home.hero')
+    @include('partials.home.identity')
+    @include('partials.home.pillars')
+    @include('partials.home.featured-work')
+    @include('partials.home.featured-projects')
+    @include('partials.home.blog-preview')
+@endsection

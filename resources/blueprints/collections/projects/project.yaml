@@ -1,0 +1,173 @@
+title: Project
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: 'Project Name'
+              required: true
+          -
+            handle: tagline
+            field:
+              type: text
+              display: 'Tagline (one sharp sentence)'
+          -
+            handle: date
+            field:
+              type: date
+              display: 'Date (year is sufficient for old projects)'
+              time_enabled: false
+          -
+            handle: date_end
+            field:
+              type: date
+              display: 'End Date (if range)'
+              time_enabled: false
+          -
+            handle: status
+            field:
+              type: select
+              display: Status
+              options:
+                active: Active
+                completed: Completed
+                ongoing: Ongoing
+                archived: Archived
+          -
+            handle: summary
+            field:
+              type: textarea
+              display: 'Summary (for cards, 1-3 sentences)'
+              character_limit: 280
+          -
+            handle: content
+            field:
+              type: markdown
+              display: 'Full Description'
+          -
+            handle: hero_image
+            field:
+              type: assets
+              display: 'Hero Image'
+              container: assets
+              max_files: 1
+          -
+            handle: gallery
+            field:
+              type: assets
+              display: Gallery
+              container: assets
+          -
+            handle: links
+            field:
+              type: replicator
+              display: Links
+              sets:
+                main:
+                  display: Links
+                  sets:
+                    link:
+                      display: Link
+                      fields:
+                        -
+                          handle: label
+                          field:
+                            type: text
+                            display: 'Label (e.g. GitHub, Demo, Video, Hackaday)'
+                        -
+                          handle: url
+                          field:
+                            type: text
+                            input_type: url
+                            display: URL
+                        -
+                          handle: icon
+                          field:
+                            type: select
+                            display: 'Icon Type'
+                            options:
+                              github: GitHub
+                              youtube: YouTube
+                              vimeo: Vimeo
+                              hackaday: Hackaday
+                              demo: 'Live Demo'
+                              external: 'External Link'
+                              archive: Archive
+          -
+            handle: project_type
+            field:
+              type: terms
+              display: 'Project Type'
+              taxonomies:
+                - project_type
+          -
+            handle: context
+            field:
+              type: terms
+              display: Context
+              taxonomies:
+                - context
+          -
+            handle: tech_stack
+            field:
+              type: terms
+              display: 'Tech Stack'
+              taxonomies:
+                - tech_stack
+          -
+            handle: awards
+            field:
+              type: replicator
+              display: 'Awards / Recognition'
+              sets:
+                main:
+                  display: Awards
+                  sets:
+                    award:
+                      display: Award
+                      fields:
+                        -
+                          handle: title
+                          field:
+                            type: text
+                            display: 'Award Title'
+                        -
+                          handle: year
+                          field:
+                            type: text
+                            display: Year
+                        -
+                          handle: amount
+                          field:
+                            type: text
+                            display: 'Amount or Prize (if applicable)'
+          -
+            handle: featured
+            field:
+              type: toggle
+              display: 'Feature on Homepage'
+              default: false
+          -
+            handle: featured_order
+            field:
+              type: integer
+              display: 'Homepage Featured Order (lower = first)'
+          -
+            handle: related_work
+            field:
+              type: entries
+              display: 'Related Work Entry'
+              collections:
+                - work
+          -
+            handle: related_projects
+            field:
+              type: entries
+              display: 'Related Projects'
+              collections:
+                - projects

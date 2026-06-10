@@ -1,0 +1,10 @@
+title: Projects
+template: projects/show
+layout: layout
+route: 'projects/{slug}'
+sort_field: date
+sort_dir: desc
+taxonomies:
+  - project_type
+  - context
+  - tech_stack

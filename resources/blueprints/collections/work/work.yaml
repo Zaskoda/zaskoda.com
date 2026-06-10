@@ -1,0 +1,108 @@
+title: 'Work Entry'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: 'Company / Organization'
+              required: true
+          -
+            handle: role
+            field:
+              type: text
+              display: 'Title / Role'
+              required: true
+          -
+            handle: employment_type
+            field:
+              type: select
+              display: Type
+              options:
+                full_time: 'Full-time'
+                contract: 'Contract / Consulting'
+                founder: Founder
+                volunteer: Volunteer
+                academic: 'Academic / Practicum'
+          -
+            handle: start_date
+            field:
+              type: date
+              display: 'Start Date'
+              time_enabled: false
+          -
+            handle: end_date
+            field:
+              type: date
+              display: 'End Date (blank = current)'
+              time_enabled: false
+          -
+            handle: is_current
+            field:
+              type: toggle
+              display: 'Currently Here'
+              default: false
+          -
+            handle: location
+            field:
+              type: text
+              display: Location
+          -
+            handle: summary
+            field:
+              type: textarea
+              display: 'Short Summary (1-2 sentences, for cards)'
+              character_limit: 220
+          -
+            handle: content
+            field:
+              type: markdown
+              display: 'Full Description'
+          -
+            handle: achievements
+            field:
+              type: replicator
+              display: 'Key Achievements'
+              sets:
+                main:
+                  display: Achievements
+                  sets:
+                    achievement:
+                      display: Achievement
+                      fields:
+                        -
+                          handle: text
+                          field:
+                            type: text
+                            display: 'Achievement (lead with a metric where possible)'
+          -
+            handle: tech_stack
+            field:
+              type: terms
+              display: 'Tech Stack'
+              taxonomies:
+                - tech_stack
+          -
+            handle: logo
+            field:
+              type: assets
+              display: 'Company / Org Logo'
+              container: assets
+              max_files: 1
+          -
+            handle: featured
+            field:
+              type: toggle
+              display: 'Feature on Homepage'
+              default: false
+          -
+            handle: related_projects
+            field:
+              type: entries
+              display: 'Related Projects'
+              collections:
+                - projects
