@@ -5,8 +5,13 @@
     $projects = \Statamic\Facades\Entry::query()
         ->where('collection', 'projects')
         ->where('published', true)
-        ->orderBy('date', 'desc')
-        ->get();
+        ->get()
+        ->sortByDesc(function ($entry) {
+            $sortDate = $entry->value('date_end') ?? $entry->value('date');
+
+            return $sortDate ? \Carbon\Carbon::parse($sortDate)->timestamp : 0;
+        })
+        ->values();
 
     $projectTypes = \Statamic\Facades\Term::query()->where('taxonomy', 'project_type')->orderBy('title')->get();
     $contexts = \Statamic\Facades\Term::query()->where('taxonomy', 'context')->orderBy('title')->get();

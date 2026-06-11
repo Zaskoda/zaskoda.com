@@ -5,13 +5,13 @@ title: 'Orbiter 8'
 tagline: 'A fully decentralized space trading MMO: all game logic lives in Solidity smart contracts. No central server.'
 date: '2019-01-01'
 status: active
-summary: 'Browser-based space MMO built entirely on the Ethereum Virtual Machine. Ships and planets are ERC-721 NFTs. In-game currency is an ERC-20 token. Deployed across 10+ chains. Won two hackathons and a Polygon Studios grant.'
+summary: 'Browser-based space MMO on the EVM: dynamically generated galaxy, ERC-721 ships and planets, ERC-20 currency with SushiSwap. Unstoppable-code ethos — client runs from hard drive, USB, or IPFS. Deployed across 10+ chains.'
 hero_image: projects/orbiter-8.jpg
 links:
   -
     type: link
     enabled: true
-    label: GitHub
+    label: 'GitHub'
     url: 'https://github.com/Partavate-Studios/orbiter8-prototype'
     icon: github
   -
@@ -26,21 +26,24 @@ links:
     label: 'Tutorial Video'
     url: 'https://www.youtube.com/watch?v=cL30sFMYi6A'
     icon: youtube
-project_type:
-  - blockchain
-  - game
-  - software
-  - open-source
-context:
-  - professional
-tech_stack:
-  - vue
-  - typescript
-  - solidity
-  - ethereum
-  - hardhat
-  - ethersjs
-  - docker
+  -
+    type: link
+    enabled: true
+    label: 'Demo 3 Trailer'
+    url: 'https://www.youtube.com/watch?v=Cno77-YOcUM'
+    icon: youtube
+  -
+    type: link
+    enabled: true
+    label: 'BlockchainNW Talk'
+    url: 'https://www.youtube.com/watch?v=W2EVIiV3u3k'
+    icon: youtube
+  -
+    type: link
+    enabled: true
+    label: 'Hacker Space Talk'
+    url: 'https://www.youtube.com/watch?v=Zojabsl4i20'
+    icon: youtube
 awards:
   -
     type: award
@@ -60,13 +63,29 @@ awards:
     title: 'Polygon Studios grant'
     year: '2022'
     amount: '$5,000'
+tech_stack:
+  - vue
+  - typescript
+  - solidity
+  - ethereum
+  - hardhat
+  - ethersjs
+  - docker
+project_type:
+  - blockchain
+  - game
+  - software
+  - open-source
+context:
+  - professional
 featured: true
 featured_order: 1
 related_work:
   - work-partavate-studios
 ---
+
 Orbiter 8 is a decentralized space trading MMO built entirely on the Ethereum Virtual Machine. All game logic runs in Solidity smart contracts: there is no central server. The game world is a dynamically generated directed network of stars that expands as players explore. Ships and planets are ERC-721 NFTs tradeable on OpenSea. The in-game currency, Galactic Credits, is an ERC-20 token swappable on SushiSwap.
 
 The client is browser-based and deliberately lightweight: anyone can build an alternate client against the same ABI. The whole project is built around the "unstoppable code" ethos. The client can run from a local hard drive, a USB stick, or IPFS, and there are no fees beyond Ethereum gas, by design.
 
-Deployed and tested on Ropsten, Rinkeby, Polygon, BNB, Arbitrum, Moonriver, Moonbase, Bobabase, and Harmony testnets. The code is archived in the GitHub Arctic Code Vault.
+Deployed and tested on Ropsten, Rinkeby, Polygon, BNB, Arbitrum, Moonriver, Moonbase, Bobabase, and Harmony testnets. The code is archived in the GitHub Arctic Code Vault. Logo and branding by Walter "2" Costinak.
