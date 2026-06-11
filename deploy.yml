@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   push:
-    branches: [main]
+    branches: [dev]
   workflow_dispatch:  # allows manual triggering from the Actions tab
 
 concurrency:
