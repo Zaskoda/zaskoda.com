@@ -11,7 +11,33 @@ onReady(() => {
     initFooterReveal();
     initEntryFilters('[data-project-card]');
     initEntryFilters('[data-work-card]');
+    initPostLightbox();
 });
+
+/*
+ * Lightbox for blog post images.
+ * Targets anchors in .post-body that wrap an image and link to a local asset
+ * image file. GLightbox (and its CSS) is lazy-loaded only when such links
+ * exist, so non-post pages don't pay for it.
+ */
+function initPostLightbox() {
+    const links = [...document.querySelectorAll('.post-body a[href^="/assets/"]')]
+        .filter((a) => /\.(png|jpe?g|gif|webp)$/i.test(a.getAttribute('href')) && a.querySelector('img'));
+    if (!links.length) return;
+
+    links.forEach((a) => {
+        a.classList.add('post-lightbox');
+        const caption = a.getAttribute('title') || a.querySelector('img').getAttribute('alt');
+        if (caption) a.setAttribute('data-glightbox', `title: ${caption}`);
+    });
+
+    Promise.all([
+        import('glightbox'),
+        import('glightbox/dist/css/glightbox.min.css'),
+    ]).then(([{ default: GLightbox }]) => {
+        GLightbox({ selector: '.post-lightbox', loop: false });
+    });
+}
 
 /* Mobile hamburger toggle */
 function initMobileNav() {

@@ -1,4 +1,17 @@
 {
+  "node_modules/glightbox/dist/css/glightbox.min.css": {
+    "file": "assets/glightbox-C45C7UYd.css",
+    "src": "node_modules/glightbox/dist/css/glightbox.min.css"
+  },
+  "node_modules/glightbox/dist/js/glightbox.min.js": {
+    "file": "assets/glightbox.min-gMfVoQul.js",
+    "name": "glightbox.min",
+    "src": "node_modules/glightbox/dist/js/glightbox.min.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/site.js"
+    ]
+  },
   "resources/css/site.css": {
     "file": "assets/site-C6DNRYM2.css",
     "name": "site",
@@ -9,9 +22,12 @@
     "isEntry": true
   },
   "resources/js/site.js": {
-    "file": "assets/site-6c3IX4FU.js",
+    "file": "assets/site-B1lpGekV.js",
     "name": "site",
     "src": "resources/js/site.js",
-    "isEntry": true
+    "isEntry": true,
+    "dynamicImports": [
+      "node_modules/glightbox/dist/js/glightbox.min.js"
+    ]
   }
 }
