@@ -56,7 +56,7 @@
         </div>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         @foreach ($projects as $entry)
             @php
                 $hero = $entry->augmentedValue('hero_image')->value();
@@ -80,7 +80,7 @@
                         </div>
                     @endif
                 </a>
-                <div class="p-6 flex flex-col grow">
+                <div class="p-5 flex flex-col grow">
                     @if ($types->isNotEmpty())
                         <div class="flex flex-wrap gap-2 mb-3">
                             @foreach ($types as $type)
@@ -88,7 +88,7 @@
                             @endforeach
                         </div>
                     @endif
-                    <h2 class="font-ui font-semibold text-lg text-cowboy-100 mb-2">
+                    <h2 class="font-ui font-semibold text-base text-cowboy-100 mb-2">
                         <a href="{{ $entry->url() }}" class="text-cowboy-100 hover:text-copper-400">{{ $entry->title }}</a>
                     </h2>
                     <p class="font-ui text-sm text-cowboy-100 leading-relaxed">{{ $entry->value('tagline') ?? $entry->value('summary') }}</p>

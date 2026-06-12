@@ -8,9 +8,13 @@
         ->get();
 @endphp
 
-<section class="bg-cowboy-950 py-20 px-6 md:px-12 lg:px-16">
+<section class="bg-ink py-20 px-6 md:px-12 lg:px-16">
     <div class="max-w-7xl mx-auto">
-        <h2 class="font-display font-bold text-4xl md:text-5xl text-cowboy-100 mb-3 border-b border-circuit-500/40 pb-3">Selected Work</h2>
+        @include('partials.section-header', [
+            'title' => 'Selected Work',
+            'action_label' => 'View all work',
+            'action_url' => '/work',
+        ])
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             @foreach ($featuredWork as $entry)
@@ -33,10 +37,6 @@
                     <a href="{{ $entry->url() }}" class="font-ui text-sm mt-auto">See full history &rarr;</a>
                 </article>
             @endforeach
-        </div>
-
-        <div class="mt-10">
-            <a href="/work" class="font-ui text-sm">See all work &rarr;</a>
         </div>
     </div>
 </section>

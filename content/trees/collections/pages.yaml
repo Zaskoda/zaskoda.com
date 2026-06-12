@@ -6,6 +6,8 @@ tree:
   -
     entry: page-projects
   -
+    entry: page-recognition
+  -
     entry: page-blog
   -
     entry: page-about

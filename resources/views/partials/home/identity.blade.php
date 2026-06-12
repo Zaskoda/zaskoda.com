@@ -1,4 +1,4 @@
-<section class="bg-cowboy-950 py-16 md:py-20 px-6 md:px-12 lg:px-16 -mt-px">
+<section class="bg-ink py-16 md:py-20 px-6 md:px-12 lg:px-16 -mt-px">
     <div class="max-w-3xl mx-auto text-center">
 
         <img

@@ -7,9 +7,13 @@
         ->get();
 @endphp
 
-<section class="bg-cowboy-950 py-20 px-6 md:px-12 lg:px-16">
+<section class="bg-ink py-20 px-6 md:px-12 lg:px-16">
     <div class="max-w-7xl mx-auto">
-        <h2 class="font-display font-bold text-4xl md:text-5xl text-cowboy-100 mb-3 border-b border-circuit-500/40 pb-3">From the Blog</h2>
+        @include('partials.section-header', [
+            'title' => 'From the Blog',
+            'action_label' => 'Read the blog',
+            'action_url' => '/blog',
+        ])
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             @foreach ($recentPosts as $post)
@@ -22,10 +26,6 @@
                     <a href="{{ $post->url() }}" class="font-ui text-sm mt-auto">Read &rarr;</a>
                 </article>
             @endforeach
-        </div>
-
-        <div class="mt-10">
-            <a href="/blog" class="font-ui text-sm">Read the blog &rarr;</a>
         </div>
     </div>
 </section>

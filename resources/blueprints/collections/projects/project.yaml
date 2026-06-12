@@ -146,6 +146,16 @@ tabs:
                           field:
                             type: text
                             display: 'Amount or Prize (if applicable)'
+                        -
+                          handle: source
+                          field:
+                            type: text
+                            display: 'Awarding Body / Source (e.g. Polygon Studios, EthDenver)'
+                        -
+                          handle: source_url
+                          field:
+                            type: link
+                            display: 'Link to source / proof (the org that gave the award)'
           -
             handle: featured
             field:

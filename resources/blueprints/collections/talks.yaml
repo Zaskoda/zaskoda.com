@@ -1,0 +1,90 @@
+title: Talk
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: 'Talk Title'
+      required: true
+  -
+    handle: event
+    field:
+      type: text
+      display: 'Event / Venue'
+      required: true
+  -
+    handle: event_url
+    field:
+      type: link
+      display: 'Event URL (optional)'
+  -
+    handle: date
+    field:
+      type: date
+      display: Date
+      time_enabled: false
+      required: true
+  -
+    handle: location
+    field:
+      type: text
+      display: 'Location (city or "Virtual")'
+  -
+    handle: talk_type
+    field:
+      type: select
+      display: Type
+      options:
+        talk: Talk
+        panel: Panel
+        workshop: Workshop
+        keynote: Keynote
+        podcast: Podcast
+        series: 'Demo / Talk Series'
+  -
+    handle: co_presenter
+    field:
+      type: text
+      display: 'Co-presenter (if any)'
+  -
+    handle: representing
+    field:
+      type: text
+      display: 'Representing (org Scott was speaking on behalf of)'
+  -
+    handle: summary
+    field:
+      type: textarea
+      display: 'Summary (1-2 sentences, for cards)'
+      character_limit: 280
+  -
+    handle: content
+    field:
+      type: bard
+      display: 'Full Description (optional)'
+  -
+    handle: video_url
+    field:
+      type: link
+      display: 'Recording URL (YouTube, Vimeo, etc.)'
+  -
+    handle: slides_url
+    field:
+      type: link
+      display: 'Slides URL (optional)'
+  -
+    handle: related_project
+    field:
+      type: entries
+      display: 'Related Project'
+      collections:
+        - projects
+      max_items: 1
+  -
+    handle: related_work
+    field:
+      type: entries
+      display: 'Related Work'
+      collections:
+        - work
+      max_items: 1

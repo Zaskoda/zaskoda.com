@@ -8,11 +8,15 @@
         ->get();
 @endphp
 
-<section class="bg-cowboy-950 py-20 px-6 md:px-12 lg:px-16">
+<section class="bg-slate py-20 px-6 md:px-12 lg:px-16">
     <div class="max-w-7xl mx-auto">
-        <h2 class="font-display font-bold text-4xl md:text-5xl text-cowboy-100 mb-3 border-b border-circuit-500/40 pb-3">Things I've Built</h2>
+        @include('partials.section-header', [
+            'title' => "Things I've Built",
+            'action_label' => 'View all projects',
+            'action_url' => '/projects',
+        ])
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             @foreach ($featuredProjects as $entry)
                 @php
                     $hero = $entry->augmentedValue('hero_image')->value();
@@ -31,7 +35,7 @@
                         @endif
                     </a>
 
-                    <div class="p-8 flex flex-col grow">
+                    <div class="p-5 flex flex-col grow">
                         @if ($types->isNotEmpty())
                             <div class="flex flex-wrap gap-2 mb-3">
                                 @foreach ($types as $type)
@@ -46,10 +50,6 @@
                     </div>
                 </article>
             @endforeach
-        </div>
-
-        <div class="mt-10">
-            <a href="/projects" class="font-ui text-sm">See all projects &rarr;</a>
         </div>
     </div>
 </section>

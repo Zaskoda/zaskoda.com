@@ -6,10 +6,13 @@
 
         {{-- Inline first: Firefox may paint before external CSS finishes downloading --}}
         <style>
-            html, body { background-color: #0a0806; color: #ede0cc; margin: 0; }
-            a { color: #d4854f; text-decoration: none; }
+            html, body { background-color: #100d09; color: #ede0cc; margin: 0; }
+            /* Link default goes in the base layer so Tailwind utilities can override it */
+            @layer base {
+                a { color: #d4854f; text-decoration: none; }
+            }
             svg { display: inline-block; vertical-align: middle; max-width: none; }
-            nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background-color: rgba(10, 8, 6, 0.92); border-bottom: 1px solid #4a3828; }
+            #site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background-color: rgba(16, 13, 9, 0.92); border-bottom: 1px solid #2e2820; }
         </style>
 
         {{-- Blocking stylesheet in <head> (never at bottom — that guarantees a flash) --}}

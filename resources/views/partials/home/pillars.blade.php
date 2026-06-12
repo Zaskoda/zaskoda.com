@@ -1,4 +1,4 @@
-<section class="bg-cowboy-950 py-20 px-6 md:px-12 lg:px-16">
+<section class="bg-slate py-20 px-6 md:px-12 lg:px-16">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 
         <div class="surface-card p-8">

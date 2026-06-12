@@ -24,8 +24,10 @@ awards:
   -
     type: award
     enabled: true
-    title: 'EthDenver 2022 award winner'
+    title: 'EthDenver 2022 Award Winner'
     year: '2022'
+    source: 'EthDenver 2022'
+    source_url: 'https://www.ethdenver.com'
 project_type:
   - blockchain
   - software

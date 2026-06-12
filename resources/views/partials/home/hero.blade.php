@@ -1,68 +1,76 @@
 {{--
     Effect 1 — Hero parallax + reflection.
-    ONE parallax layer contains the image, reflection, and ALL gradients so nothing
-    can drift out of sync on scroll (static overlay siblings caused the seam bug).
+    The parallax layer holds the photo and its mirrored reflection so they move as one.
+    The vignette and bottom fade are STATIC siblings anchored to the section, so the
+    fade always meets the hero/identity seam regardless of scroll position — the moving
+    layer simply slides underneath them. The photo translates down at 0.6x scroll, which
+    makes the image appear to scroll at ~40% of page speed.
 --}}
-<section class="relative overflow-hidden bg-cowboy-950" data-hero>
+@php $reflectionH = '14rem'; @endphp
 
-    {{-- Spacer reserves room for reflection below the viewport content --}}
-    @php $reflectionH = '14rem'; @endphp
+<section class="relative overflow-hidden bg-ink" data-hero>
 
-    <div class="absolute inset-x-0 top-0 overflow-hidden pointer-events-none" aria-hidden="true"
-         style="height: calc(100vh + {{ $reflectionH }} + 25vh);">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         <div
             class="absolute inset-x-0 top-0 will-change-transform"
-            style="height: calc(100vh + {{ $reflectionH }}); transform: scale(1.35); transform-origin: top center;"
+            style="height: calc(100vh + {{ $reflectionH }});"
             data-hero-parallax
         >
-            {{-- Main hero photo --}}
+            {{-- Main hero photo: overscanned ~1.15 so edges never show during parallax --}}
             <div
                 class="absolute inset-x-0 top-0 bg-cover bg-center"
-                style="height: 100vh; background-image: url('/assets/photos/hero-alaska-boat.jpg');"
+                style="height: 100vh; background-image: url('/assets/photos/hero-alaska-boat.jpg'); transform: scale(1.15); transform-origin: bottom center;"
             ></div>
 
-            {{-- Mirrored reflection directly beneath the hero photo --}}
+            {{-- Mirrored reflection directly beneath the photo's bottom edge --}}
             <div
-                class="absolute inset-x-0 bg-cover bg-center opacity-45"
-                style="top: 100vh; height: {{ $reflectionH }}; background-image: url('/assets/photos/hero-alaska-boat.jpg'); background-position: center bottom; transform: scaleY(-1); transform-origin: top center;"
+                class="absolute inset-x-0 bg-cover opacity-40"
+                style="top: 100vh; height: {{ $reflectionH }}; background-image: url('/assets/photos/hero-alaska-boat.jpg'); background-position: center bottom; transform: scale(1.15) scaleY(-1); transform-origin: top center;"
             ></div>
+        </div>
 
-            {{-- Vignette: lives inside parallax layer so it tracks the photo --}}
-            <div class="absolute inset-x-0 top-0 bg-gradient-to-b from-cowboy-950/25 via-transparent to-transparent pointer-events-none"
-                 style="height: 100vh;"></div>
+        {{-- Static top vignette --}}
+        <div class="absolute inset-x-0 top-0 h-[30vh] bg-gradient-to-b from-ink/25 to-transparent"></div>
 
-            {{-- Reflection fade into page background: also inside parallax layer --}}
-            <div class="absolute inset-x-0 bg-gradient-to-b from-transparent via-cowboy-950/45 to-cowboy-950 pointer-events-none"
-                 style="top: calc(100vh - 4rem); height: calc({{ $reflectionH }} + 4rem);"></div>
+        {{-- Static bottom fade into Surface A: anchored to the section bottom so the
+             transition into the identity block is seamless at every scroll position --}}
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-b from-transparent via-ink/50 to-ink"
+             style="height: calc({{ $reflectionH }} + 6rem);"></div>
+    </div>
+
+    {{-- Text block: centered near the top on small screens; right third, right-aligned at md+ --}}
+    <div class="relative z-10 h-screen px-6 md:px-12 lg:px-16">
+        {{-- Outer block sits in the right third at md+; inner block shrink-wraps to the
+             widest line and stays left-aligned, so "This is my website." aligns under
+             "Hello Internet," --}}
+        <div class="flex h-full flex-col items-center pt-[11vh] md:w-1/3 md:ml-auto md:items-end md:justify-center md:pt-0">
+            <div class="flex flex-col items-center text-center md:w-fit md:items-start md:text-left">
+                <h1 class="font-display font-extrabold text-6xl md:text-7xl lg:text-8xl text-cowboy-50 mb-3 drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
+                    Hello Internet,
+                </h1>
+                <p class="font-ui text-xl md:text-2xl text-cowboy-100 mb-10 drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
+                    This is my website.
+                </p>
+
+                <a
+                    href="https://www.flickr.com/photos/zaskoda/2623298793/"
+                    class="group relative w-20 h-20 will-change-transform"
+                    title="I made this boat on a trip to Alaska. Watch it sail."
+                    target="_blank"
+                    rel="noopener"
+                    data-hero-play
+                >
+                    <svg viewBox="0 0 80 80" class="w-full h-full text-cowboy-50 group-hover:text-copper-400 transition-colors drop-shadow-lg" aria-hidden="true">
+                        <circle cx="40" cy="40" r="38" stroke="currentColor" stroke-width="2" fill="rgba(0,0,0,0.35)" opacity="0.9"/>
+                        <polygon points="32,24 60,40 32,56" fill="currentColor" opacity="0.95"/>
+                    </svg>
+                    <span class="sr-only">I made this boat on a trip to Alaska. Watch it sail.</span>
+                </a>
+            </div>
         </div>
     </div>
 
-    {{-- Text in upper third; boat/hand composition sits lower in the frame --}}
-    <div class="relative z-10 flex flex-col items-center h-screen px-6 pt-[11vh] md:pt-[13vh] text-center">
-        <h1 class="font-display font-extrabold text-6xl md:text-8xl lg:text-9xl text-cowboy-50 mb-3 drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
-            Hello Internet,
-        </h1>
-        <p class="font-ui text-xl md:text-2xl text-cowboy-100 mb-10 drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
-            This is my website.
-        </p>
-
-        <a
-            href="https://www.flickr.com/photos/zaskoda/2623298793/"
-            class="group relative w-20 h-20 will-change-transform"
-            title="I made this boat on a trip to Alaska. Watch it sail."
-            target="_blank"
-            rel="noopener"
-            data-hero-play
-        >
-            <svg viewBox="0 0 80 80" class="w-full h-full text-cowboy-50 group-hover:text-copper-400 transition-colors drop-shadow-lg" aria-hidden="true">
-                <circle cx="40" cy="40" r="38" stroke="currentColor" stroke-width="2" fill="rgba(0,0,0,0.35)" opacity="0.9"/>
-                <polygon points="32,24 60,40 32,56" fill="currentColor" opacity="0.95"/>
-            </svg>
-            <span class="sr-only">I made this boat on a trip to Alaska. Watch it sail.</span>
-        </a>
-    </div>
-
-    {{-- Layout spacer: reflection renders in the parallax layer behind this area --}}
-    <div class="relative h-48 md:h-56 pointer-events-none -mb-px" aria-hidden="true"></div>
+    {{-- Layout spacer: the reflection renders in the parallax layer behind this area --}}
+    <div class="relative pointer-events-none -mb-px" style="height: {{ $reflectionH }};" aria-hidden="true"></div>
 
 </section>

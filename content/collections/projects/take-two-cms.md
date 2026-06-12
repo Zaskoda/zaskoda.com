@@ -6,6 +6,14 @@ tagline: 'A CMS built for GodGames that ran Take-Two''s primary websites for ove
 date: '1999-01-01'
 status: archived
 summary: 'Built for Gathering of Developers; after Take-Two acquisition, Take2Games.com was rebuilt on it. Powered publisher web presence for 10+ years. Product portal and B2B retailer community.'
+awards:
+  -
+    type: award
+    enabled: true
+    title: 'SXSW Best Online Gaming Site — Nomination'
+    year: '2001'
+    source: 'South by Southwest Interactive'
+    source_url: 'https://www.sxsw.com'
 project_type:
   - software
   - community-platform

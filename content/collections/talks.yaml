@@ -1,0 +1,6 @@
+title: Talks
+template: talks/show
+layout: layout
+route: 'talks/{slug}'
+sort_field: date
+sort_dir: desc

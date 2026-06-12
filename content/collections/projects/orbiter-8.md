@@ -48,21 +48,27 @@ awards:
   -
     type: award
     enabled: true
-    title: 'Moonriver Grants Hackathon: 1st place, gaming'
+    title: 'First Place — Gaming Category'
     year: '2022'
-    amount: '419 MOVR'
+    amount: '419 MOVR tokens'
+    source: 'Moonriver Grants Hackathon'
+    source_url: 'https://moonriver.moonbeam.network/'
   -
     type: award
     enabled: true
-    title: 'Bobabeam Bridging Hackathon: 1st place'
+    title: 'First Place — Bridging Collaboration'
     year: '2022'
-    amount: '$3,500'
+    amount: '$3,500 USD'
+    source: 'Boba × Moonbeam Bridging Hackathon'
+    source_url: 'https://boba.network/'
   -
     type: award
     enabled: true
-    title: 'Polygon Studios grant'
+    title: 'Polygon Studios Grant'
     year: '2022'
-    amount: '$5,000'
+    amount: '$5,000 USD'
+    source: 'Polygon Studios'
+    source_url: 'https://polygon.technology/studios'
 tech_stack:
   - vue
   - typescript

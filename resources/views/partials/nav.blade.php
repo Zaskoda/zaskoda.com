@@ -4,14 +4,16 @@
     $navLinks = [
         ['label' => 'Work', 'url' => '/work', 'section' => 'work'],
         ['label' => 'Projects', 'url' => '/projects', 'section' => 'projects'],
+        ['label' => 'Recognition', 'url' => '/recognition', 'section' => 'recognition'],
         ['label' => 'Blog', 'url' => '/blog', 'section' => 'blog'],
         ['label' => 'About', 'url' => '/about', 'section' => 'about'],
         ['label' => 'Contact', 'url' => '/contact', 'section' => 'contact'],
     ];
 @endphp
 
-<nav class="fixed top-0 w-full z-50 bg-cowboy-950/90 backdrop-blur-sm border-b border-cowboy-700">
-    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between h-14">
+<nav id="site-nav" class="fixed top-0 w-full z-50 bg-ink/90 backdrop-blur-sm border-b border-card-border">
+    {{-- Full-bleed header: inner container is wider than the page content column --}}
+    <div class="max-w-[96rem] mx-auto px-6 flex items-center justify-between h-14">
 
         {{-- Logo: zas light, Koda bold, .com light --}}
         <a href="/" class="flex items-baseline leading-none hover:no-underline">
@@ -46,7 +48,7 @@
     </div>
 
     {{-- Mobile dropdown --}}
-    <div class="hidden md:hidden bg-cowboy-950 border-t border-cowboy-700 px-6 py-6 space-y-1" data-nav-menu>
+    <div class="hidden md:hidden bg-ink border-t border-card-border px-6 py-6 space-y-1" data-nav-menu>
         @foreach ($navLinks as $link)
             @php $isActive = $activeSection === $link['section']; @endphp
             <a

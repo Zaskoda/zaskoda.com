@@ -1,0 +1,77 @@
+title: 'Game Credit'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: 'Game Title'
+      required: true
+  -
+    handle: date
+    field:
+      type: date
+      display: 'Release Date'
+      time_enabled: false
+      required: true
+  -
+    handle: platforms
+    field:
+      type: text
+      display: 'Platforms (comma-separated, e.g. Xbox, Windows)'
+  -
+    handle: developer
+    field:
+      type: text
+      display: 'Developer Studio'
+  -
+    handle: publisher
+    field:
+      type: text
+      display: Publisher
+  -
+    handle: role
+    field:
+      type: text
+      display: 'Scott''s Role / Credit'
+      required: true
+  -
+    handle: role_category
+    field:
+      type: select
+      display: 'Credit Category'
+      options:
+        engineering: 'Programming / Engineering'
+        technology: Technology
+        community: 'Online Community / Business'
+        pr: 'Public Relations / Marketing'
+        support: 'Customer / Technical Support'
+  -
+    handle: summary
+    field:
+      type: textarea
+      display: 'Summary (optional, for notable titles)'
+      character_limit: 280
+  -
+    handle: mobygames_url
+    field:
+      type: link
+      display: 'MobyGames URL for this title'
+  -
+    handle: game_url
+    field:
+      type: link
+      display: 'Official / Wikipedia URL for this game'
+  -
+    handle: cover_image
+    field:
+      type: assets
+      display: 'Cover Art / Screenshot'
+      container: assets
+      max_files: 1
+  -
+    handle: related_work
+    field:
+      type: entries
+      display: 'Related Work Entry'
+      collections:
+        - work

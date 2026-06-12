@@ -4,6 +4,15 @@
 @source "../../content";
 
 @theme {
+    /* Surfaces — the two alternating section backgrounds */
+    --color-ink: #100d09;     /* warm near-black (Surface A) */
+    --color-slate: #0d1719;   /* deep teal-charcoal (Surface B) */
+
+    /* Card surfaces — desaturated from the old brown so copper does the warm work */
+    --color-card: #181410;
+    --color-card-border: #2e2820;
+    --color-card-hover: #1f1a14;
+
     /* Campfire-at-night: near-black page, warm card step, cream text */
     --color-cowboy-950: #0a0806;
     --color-cowboy-900: #130f0a;
@@ -34,38 +43,43 @@
     --font-body: "Source Serif 4", serif;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+/* Element defaults live in the base layer so utility classes can override them.
+   (Unlayered rules would beat @layer utilities regardless of specificity.) */
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
 
-body {
-    @apply bg-cowboy-950 text-cowboy-100 font-ui antialiased;
-}
+    body {
+        @apply bg-ink text-cowboy-100 font-ui antialiased;
+    }
 
-a {
-    @apply text-copper-500 transition-colors duration-200;
-}
+    a {
+        @apply text-copper-500 transition-colors duration-200;
+    }
 
-a:hover {
-    @apply text-copper-400;
-    text-shadow: 0 0 12px rgba(58, 138, 156, 0.35);
-}
+    a:hover {
+        @apply text-copper-400;
+        text-shadow: 0 0 12px rgba(58, 138, 156, 0.35);
+    }
 
-h1, h2, h3, h4 {
-    @apply text-cowboy-100;
+    h1, h2, h3, h4 {
+        @apply text-cowboy-100;
+    }
 }
 
 @layer components {
+    /* One card treatment for both surfaces — components never vary per section */
     .surface-card {
-        @apply bg-cowboy-800 rounded-lg border border-cowboy-600
+        @apply bg-card rounded-lg border border-card-border
                shadow-[0_4px_32px_rgba(0,0,0,0.6)]
-               hover:border-cowboy-500 transition-colors duration-200;
+               hover:bg-card-hover hover:border-cowboy-600 transition-colors duration-200;
     }
 
     .surface-card-alt {
-        @apply bg-cowboy-800/80 rounded-lg border border-cowboy-600
+        @apply bg-card/80 rounded-lg border border-card-border
                shadow-[0_4px_32px_rgba(0,0,0,0.6)]
-               hover:border-cowboy-500 transition-colors duration-200;
+               hover:bg-card-hover hover:border-cowboy-600 transition-colors duration-200;
     }
 
     .section-heading {
@@ -94,9 +108,10 @@ h1, h2, h3, h4 {
                border border-circuit-500/60 text-circuit-400 bg-circuit-700/20;
     }
 
+    /* Non-tech badges: neutral border, muted text — copper and teal stay reserved */
     .badge-warm {
         @apply font-ui text-xs px-2 py-0.5 rounded
-               border border-cowboy-500 text-cowboy-300 bg-cowboy-900/50;
+               border border-card-border text-cowboy-300 bg-cowboy-900/50;
     }
 
     .inline-photo {
@@ -141,12 +156,6 @@ h1, h2, h3, h4 {
 
     .nav-link-mobile--active:hover {
         @apply text-copper-300 bg-cowboy-800/60;
-    }
-
-    .footer-scrim {
-        @apply rounded-xl px-8 py-10;
-        background: rgba(10, 8, 6, 0.62);
-        backdrop-filter: blur(6px);
     }
 
     .btn-cta {

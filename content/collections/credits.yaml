@@ -1,0 +1,6 @@
+title: Credits
+template: credits/show
+layout: layout
+route: 'credits/{slug}'
+sort_field: date
+sort_dir: desc

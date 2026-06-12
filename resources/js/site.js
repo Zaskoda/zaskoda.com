@@ -27,22 +27,22 @@ function initMobileNav() {
 
 /*
  * Effect 1 — Hero parallax.
- * Single layer holds image, reflection, and gradients — one transform, no seam.
- * Matches old site: background-position moves at ~scrollY/3.
+ * The layer (photo + reflection) translates DOWN at 0.6x scroll, so the image
+ * appears to scroll at ~40% of page speed. The ~1.15 overscan lives on the photo
+ * elements themselves; the section's static bottom fade guarantees no seam.
  */
 function initHeroParallax() {
     const layer = document.querySelector('[data-hero-parallax]');
     const play = document.querySelector('[data-hero-play]');
     if (!layer) return;
 
-    const scale = 1.35;
     let ticking = false;
 
     function update() {
         const y = window.scrollY;
-        const offset = y * 0.33;
+        const offset = y * 0.6;
 
-        layer.style.transform = `translate3d(0, ${offset}px, 0) scale(${scale})`;
+        layer.style.transform = `translate3d(0, ${offset}px, 0)`;
 
         if (play) {
             const playScale = Math.max(0, 1 - y * 0.003);

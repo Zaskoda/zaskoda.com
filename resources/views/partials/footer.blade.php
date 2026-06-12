@@ -2,6 +2,8 @@
     Effect 2 — Seattle footer reveal.
     min-h-screen + bg-fixed: content scrolls up to reveal the full skyline.
     site.js shifts background-position as the footer enters view; touch gets scroll fallback.
+    The photo stays clearly visible — only a top gradient blends in the page content,
+    and the footer content sits in a contained card near the bottom.
 --}}
 <footer
     class="relative min-h-screen bg-cover bg-no-repeat bg-fixed"
@@ -9,12 +11,11 @@
     data-footer
 >
     {{-- Top fade only: blend scrolling page content into the skyline --}}
-    <div class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-cowboy-950 via-cowboy-950/30 to-transparent pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-ink to-transparent pointer-events-none" aria-hidden="true"></div>
 
-    {{-- Content anchored at the ¼ mark from the top of the reveal --}}
-    <div class="relative z-10 w-full max-w-4xl mx-auto px-6 pt-[25vh] pb-16 text-center">
-
-        <div class="footer-scrim mx-auto max-w-lg">
+    {{-- Content card anchored near the bottom of the reveal --}}
+    <div class="relative z-10 min-h-screen flex items-end justify-center px-6 pt-[40vh] pb-12 md:pb-16">
+        <div class="w-full max-w-2xl bg-ink/85 backdrop-blur-sm border border-card-border rounded-lg px-8 py-10 md:px-12 text-center">
             <p class="font-body italic text-cowboy-100 text-lg leading-relaxed whitespace-pre-line">
                 {{ $site_settings['tagline'] ?? '' }}
             </p>
