@@ -18,6 +18,13 @@ tabs:
               display: Excerpt
               instructions: 'Short summary shown on the blog index and homepage. Falls back to the start of the content if blank.'
           -
+            handle: categories
+            field:
+              type: terms
+              display: Categories
+              taxonomies:
+                - categories
+          -
             handle: content
             field:
               type: markdown

@@ -2,8 +2,11 @@ title: Posts
 template: posts/show
 layout: layout
 route: 'blog/{slug}'
+mount: page-blog
 date: true
 date_behavior:
   past: public
   future: private
 sort_dir: desc
+taxonomies:
+  - categories

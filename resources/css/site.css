@@ -164,6 +164,33 @@
                hover:bg-copper-600 hover:text-cowboy-50 hover:border-copper-400
                transition-all duration-200;
     }
+
+    /* Blog post images: float right, text wraps.
+       Targets both bare <img> (markdown-imported posts) and
+       <figure> (Bard-authored posts) so captions stay attached. */
+    .post-body img,
+    .post-body figure {
+        @apply float-right max-w-[45%] ml-6 mb-4 rounded-lg;
+    }
+
+    .post-body figure img {
+        /* Images inside figures shouldn't double-apply float/margins */
+        @apply float-none max-w-full ml-0 mb-0;
+    }
+
+    /* Mobile: no float — full-width images read better */
+    @media (max-width: 640px) {
+        .post-body img,
+        .post-body figure {
+            @apply float-none max-w-full ml-0;
+        }
+    }
+
+    /* Contain floats so an image near the end of a post
+       cannot bleed past the post container */
+    .post-body {
+        display: flow-root;
+    }
 }
 
 .prose.prose-invert {
