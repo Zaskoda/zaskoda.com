@@ -94,6 +94,20 @@ tabs:
               taxonomies:
                 - tech_stack
           -
+            handle: role_focus
+            field:
+              type: terms
+              display: 'Role Focus'
+              taxonomies:
+                - role_focus
+          -
+            handle: industry
+            field:
+              type: terms
+              display: Industry
+              taxonomies:
+                - industry
+          -
             handle: logo
             field:
               type: assets

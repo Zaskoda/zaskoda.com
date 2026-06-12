@@ -34,6 +34,11 @@ tech_stack:
   - php
   - statamic
   - github-actions
+role_focus:
+  - engineering
+  - leadership
+industry:
+  - legal
 featured: true
 ---
 Juxtaposition Records is the operating name of a legal services firm specializing in asbestos claims. I joined as the primary and effectively sole engineer, inheriting a system with no established engineering practices.

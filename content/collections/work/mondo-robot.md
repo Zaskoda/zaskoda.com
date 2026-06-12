@@ -23,6 +23,10 @@ tech_stack:
   - unity3d
 related_projects:
   - project-digital-globe-ipad-app
+role_focus:
+  - engineering
+industry:
+  - media
 featured: false
 ---
 Mondo Robot is a digital agency. Projects included a networked Unity3D iPad experience for Digital Globe teaching clients how satellite systems work through interactive gameplay with presenter-controlled pacing; two HTML5 presentations for Microsoft optimized for IE10 on pre-release Windows 8; and a parallax-scrolling multimedia site for Level 3 built with Adobe Edge Animate.

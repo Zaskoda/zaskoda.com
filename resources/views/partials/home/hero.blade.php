@@ -38,10 +38,10 @@
              style="height: calc({{ $reflectionH }} + 6rem);"></div>
     </div>
 
-    {{-- Text block: near top on mobile; md+ inset 10% from top, 5–10% from right --}}
-    <div class="relative z-10 h-screen px-6 md:px-12 lg:px-16">
-        <div class="flex h-full flex-col items-center pt-[11vh] md:items-end md:pt-[10%] md:pr-[5%] lg:pr-[10%]">
-            <div class="flex flex-col items-center text-center md:w-fit md:items-start md:text-left">
+    {{-- Text block: centered below lg; at lg+ left edge of box sits on the 50% line --}}
+    <div class="relative z-10 h-screen px-6 lg:px-16">
+        <div class="flex h-full flex-col items-center pt-[11vh] lg:items-start lg:pt-[10%] lg:pl-[50%]">
+            <div class="flex flex-col items-center text-center lg:w-fit lg:items-start lg:text-left">
                 <h1 class="font-display font-extrabold text-6xl md:text-7xl lg:text-8xl text-cowboy-50 mb-3 drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
                     Hello Internet,
                 </h1>

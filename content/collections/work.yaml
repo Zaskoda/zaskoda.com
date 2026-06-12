@@ -2,7 +2,9 @@ title: Work
 template: work/show
 layout: layout
 route: 'work/{slug}'
-sort_field: start_date
+sort_field: end_date
 sort_dir: desc
 taxonomies:
   - tech_stack
+  - role_focus
+  - industry

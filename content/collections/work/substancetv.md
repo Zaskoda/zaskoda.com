@@ -15,6 +15,11 @@ achievements:
     type: achievement
     enabled: true
     text: 'Built and managed the companion website for the DVD videomagazine'
+role_focus:
+  - engineering
+  - leadership
+industry:
+  - media
 featured: false
 ---
 When Take-Two Interactive acquired Gathering of Developers, the founders formed SubstanceTV, a DVD videomagazine. Scott was hired as Director of Web Development to build and manage the companion website providing additional content for each DVD release. The company collapsed after a marketing-driven mass email campaign — sent without Scott's knowledge — got the domain blacklisted across the Internet; he later documented the experience publicly as a case study in why never to spam. This is the company Scott was representing when he spoke at SXSW Interactive 2001.

@@ -32,6 +32,11 @@ tech_stack:
 related_projects:
   - project-take-two-cms
   - project-fantasy-origin
+role_focus:
+  - engineering
+  - community
+industry:
+  - gaming
 featured: false
 ---
 Gathering of Developers was a publisher of computer and video games, later acquired by Take-Two Interactive. Scott joined as webmaster/online programmer — his first major professional web role, coming from a rural Texas ISP. He left to co-found Tempest Digital Solutions (with GodGames as the anchor client), then returned when GodGames moved operations to Austin. He built the CMS that was so effective Take-Two rebuilt Take2Games.com on it after the acquisition — it ran their primary websites for more than a decade. He also built a product portal hub for all GodGames titles, a private B2B community for game retailers, individual game sites, and Fantasy Origin, an indie game developer community that outlived his ownership by a decade. He led the GodGames.com redesign that was nominated for SXSW Best Online Gaming Site, and coined the term "Information Architecture" circa 1998. Two tenures, with Tempest Digital Solutions in between.

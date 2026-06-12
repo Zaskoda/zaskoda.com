@@ -41,6 +41,12 @@ tech_stack:
   - hardhat
   - ethersjs
   - docker
+role_focus:
+  - engineering
+  - leadership
+industry:
+  - gaming
+  - blockchain
 featured: true
 related_projects:
   - project-orbiter-8

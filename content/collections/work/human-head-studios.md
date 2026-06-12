@@ -16,6 +16,10 @@ achievements:
     text: "Shipped a AAA title: enemy AI, UI, mini-games, animation scripting, and environmental effects on Dead Man's Hand"
 tech_stack:
   - unreal-engine
+role_focus:
+  - engineering
+industry:
+  - gaming
 featured: false
 ---
 Temporary contract as a junior game programmer at Human Head Studios, brought in near the end of production to help finish and ship Dead Man's Hand, a western FPS published by Atari on Unreal Engine for Xbox and PC. Work spanned enemy AI programming, UI development, mini-game development, character animation scripting, and environmental effects.

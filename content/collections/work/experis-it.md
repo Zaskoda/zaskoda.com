@@ -19,6 +19,11 @@ achievements:
     type: achievement
     enabled: true
     text: 'Built jQuery widgets and HTML5 interactive modules for CSU Global'
+role_focus:
+  - engineering
+industry:
+  - education
+  - media
 featured: false
 ---
 Contract through Experis IT. Built a variety of HTML5/JavaScript interactive modules, developed jQuery widgets for CSU Global, and ported a primary website from an outdated CMS to Concrete5.

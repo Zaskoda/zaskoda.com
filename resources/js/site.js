@@ -9,7 +9,8 @@ onReady(() => {
     initMobileNav();
     initHeroParallax();
     initFooterReveal();
-    initProjectFilters();
+    initEntryFilters('[data-project-card]');
+    initEntryFilters('[data-work-card]');
 });
 
 /* Mobile hamburger toggle */
@@ -66,43 +67,78 @@ function initHeroParallax() {
 }
 
 /*
- * Project grid filters.
+ * Entry list filters (projects and work pages).
  * OR logic within a row, AND across rows.
  */
-function initProjectFilters() {
-    const groups = document.querySelectorAll('[data-filter-group]');
-    const cards = document.querySelectorAll('[data-project-card]');
-    if (!groups.length || !cards.length) return;
+function initEntryFilters(cardSelector) {
+    const cards = document.querySelectorAll(cardSelector);
+    if (!cards.length) return;
 
-    const selected = { types: new Set(), contexts: new Set() };
+    const groups = document.querySelectorAll('[data-filter-group]');
+    if (!groups.length) return;
+
+    const selected = {};
+    groups.forEach((group) => {
+        selected[group.dataset.filterGroup] = new Set();
+    });
+
+    const emptyState = document.querySelector('[data-filter-empty]');
+
+    const accentForGroup = {
+        types: 'copper',
+        contexts: 'circuit',
+        type: 'copper',
+        focus: 'circuit',
+        industry: 'copper',
+    };
+
+    function cardValues(card, groupName) {
+        const raw = card.dataset[groupName] || '';
+        if (!raw) return [];
+        return raw.split(' ').filter(Boolean);
+    }
 
     function applyFilters() {
+        let visibleCount = 0;
+
         cards.forEach((card) => {
-            const cardTypes = (card.dataset.types || '').split(' ').filter(Boolean);
-            const cardContexts = (card.dataset.contexts || '').split(' ').filter(Boolean);
+            let show = true;
 
-            const typeMatch = selected.types.size === 0
-                || cardTypes.some((t) => selected.types.has(t));
-            const contextMatch = selected.contexts.size === 0
-                || cardContexts.some((c) => selected.contexts.has(c));
+            groups.forEach((group) => {
+                const groupName = group.dataset.filterGroup;
+                const active = selected[groupName];
+                if (active.size === 0) return;
 
-            card.classList.toggle('hidden', !(typeMatch && contextMatch));
+                const values = cardValues(card, groupName);
+                const match = values.some((v) => active.has(v));
+                if (!match) show = false;
+            });
+
+            card.classList.toggle('hidden', !show);
+            if (show) visibleCount++;
         });
+
+        if (emptyState) {
+            emptyState.classList.toggle('hidden', visibleCount > 0);
+        }
     }
 
     function styleButtons(group, groupName) {
+        const accent = accentForGroup[groupName] || 'copper';
         const allButton = group.querySelector('[data-filter-all]');
         const active = selected[groupName];
+
         allButton.setAttribute('aria-pressed', String(active.size === 0));
         allButton.classList.toggle('bg-cowboy-700', active.size === 0);
+
         group.querySelectorAll('[data-filter]').forEach((btn) => {
             const isActive = active.has(btn.dataset.filter);
             btn.setAttribute('aria-pressed', String(isActive));
             btn.classList.toggle('bg-cowboy-700', isActive);
-            btn.classList.toggle('border-copper-600', isActive && groupName === 'types');
-            btn.classList.toggle('text-copper-400', isActive && groupName === 'types');
-            btn.classList.toggle('border-circuit-500', isActive && groupName === 'contexts');
-            btn.classList.toggle('text-circuit-400', isActive && groupName === 'contexts');
+            btn.classList.toggle('border-copper-600', isActive && accent === 'copper');
+            btn.classList.toggle('text-copper-400', isActive && accent === 'copper');
+            btn.classList.toggle('border-circuit-500', isActive && accent === 'circuit');
+            btn.classList.toggle('text-circuit-400', isActive && accent === 'circuit');
         });
     }
 
@@ -130,6 +166,8 @@ function initProjectFilters() {
 
         styleButtons(group, groupName);
     });
+
+    applyFilters();
 }
 
 /*

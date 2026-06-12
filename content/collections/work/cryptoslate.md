@@ -19,6 +19,11 @@ achievements:
     type: achievement
     enabled: true
     text: "Interviewed Chris Clay, director of MTG Arena, on joining Immutable's Gods Unchained (August 2019)"
+role_focus:
+  - writing
+industry:
+  - blockchain
+  - media
 featured: false
 ---
 Began writing about blockchain on LinkedIn in 2018, then moved to CryptoSlate as a paid author. Coverage focused on blockchain gaming and Ethereum: the Constantinople hard fork, the ProgPoW mining debate, blockchain tabletop gaming, and an interview with the director of MTG Arena on his move to Gods Unchained. Author page: cryptoslate.com/author/scott-dudley/

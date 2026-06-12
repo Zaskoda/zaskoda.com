@@ -3,9 +3,18 @@
         ->where('collection', 'work')
         ->where('published', true)
         ->where('featured', true)
-        ->orderBy('start_date', 'desc')
-        ->limit(3)
-        ->get();
+        ->get()
+        ->sortByDesc(function ($entry) {
+            if ($entry->value('is_current')) {
+                return PHP_INT_MAX;
+            }
+
+            $sortDate = $entry->value('end_date') ?? $entry->value('start_date');
+
+            return $sortDate ? \Carbon\Carbon::parse($sortDate)->timestamp : 0;
+        })
+        ->take(3)
+        ->values();
 @endphp
 
 <section class="bg-ink py-20 px-6 md:px-12 lg:px-16">

@@ -25,6 +25,12 @@ achievements:
 tech_stack:
   - wordpress
   - php
+role_focus:
+  - community
+  - leadership
+industry:
+  - gaming
+  - media
 featured: false
 ---
 Founded Webcraft Studios to offer "Digital Theatrics": taking video game characters and their worlds onto social media platforms, in character. The primary client campaign (Mushroom Men, a Nintendo Wii/DS title) was reported to be outperforming every other social media campaign at its publisher before the 2008 financial crash froze the client's investor accounts and collapsed the chain. Scott won a default judgment in the aftermath but there were no assets left to collect — and paid all of his own contractors out of pocket despite the total loss. The experience significantly shaped his later interest in decentralized systems. The Webcraft billing entity continued for side work through 2011, including Zeal Optics' e-commerce site and two dozen WordPress client sites.

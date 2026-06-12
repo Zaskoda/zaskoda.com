@@ -35,6 +35,11 @@ tech_stack:
   - aws
   - docker
   - splunk
+role_focus:
+  - engineering
+industry:
+  - e-commerce
+  - gaming
 featured: true
 ---
 Card Kingdom buys and sells Magic: The Gathering cards online and is one of North America's largest MTG retailers. I spent five years on the engineering team working across the full stack on e-commerce, administration, fraud prevention, and infrastructure.

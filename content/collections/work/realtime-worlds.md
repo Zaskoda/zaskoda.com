@@ -23,6 +23,12 @@ tech_stack:
   - php
 related_projects:
   - project-apb-community-platform
+role_focus:
+  - engineering
+  - community
+  - leadership
+industry:
+  - gaming
 featured: false
 ---
 Realtime Worlds was the studio behind APB: All Points Bulletin (and Crackdown, which Scott did not work on). Led the community web platform for APB: a localized, international platform that served as the public face of the game, supporting hundreds of thousands of concurrent users at launch. The team also developed the official company website, a Facebook game, and other online properties. Built in CakePHP with vBulletin integration. Flew to Dundee in February 2009 to work with the dev team in person. After Realtime Worlds' bankruptcy, APB was sold and still operates today as a free-to-play game. MobyGames credit: Lead Web.

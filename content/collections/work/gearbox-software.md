@@ -27,6 +27,12 @@ tech_stack:
   - cakephp
 related_projects:
   - project-gearbox-community-architecture
+role_focus:
+  - engineering
+  - community
+  - leadership
+industry:
+  - gaming
 featured: false
 ---
 Gearbox Software is the studio known for Brothers in Arms and later Borderlands. Scott held multiple titles over three years — Community Manager, Online Architect, Director of Applications, and finally Director of New Media — running a small team responsible for websites, online community, and internal tools. He grew and maintained one of the largest, most active game developer forums of the era, and built a custom PHP web framework from scratch for Gearbox's online properties before migrating the codebase to CakePHP as scope grew. His community systems — the Ban Bin forum jail, The Illuminate reward forum, Internal Combustion, Gearblogs, and ARG-style collaborative puzzle campaigns — pioneered rehabilitative moderation practices years before they became standard. MobyGames credits on three Brothers in Arms titles span community, engineering, and PR roles.

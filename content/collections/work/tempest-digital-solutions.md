@@ -15,6 +15,11 @@ achievements:
     type: achievement
     enabled: true
     text: 'Founded and ran a web development firm with a major game publisher as anchor client'
+role_focus:
+  - engineering
+  - leadership
+industry:
+  - media
 featured: false
 ---
 Co-founded with friends as a web development firm; Gathering of Developers was the primary client. "We did well. But we shut it all down after just a couple of years — mostly because we were too young and immature to handle our interpersonal problems effectively." The experience heavily influenced Scott's career path and his ongoing interest in entrepreneurship. He returned to GodGames afterward.

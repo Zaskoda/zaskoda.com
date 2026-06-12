@@ -24,6 +24,11 @@ tech_stack:
   - bootstrap
   - aws
   - node
+role_focus:
+  - engineering
+industry:
+  - e-commerce
+  - media
 featured: false
 ---
 Trad Ventures specializes in stock media, owning StockMusic.net and StockFuel.com. Worked directly with the owner and part-time remote contractors to rebuild both platforms from the ground up. First full Laravel stack ownership.
