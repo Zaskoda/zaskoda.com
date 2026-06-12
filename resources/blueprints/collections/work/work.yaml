@@ -35,6 +35,13 @@ tabs:
               display: 'Start Date'
               time_enabled: false
           -
+            handle: date_approximate
+            field:
+              type: toggle
+              display: 'Approximate Dates'
+              instructions: 'When enabled, dates may display as "c. 1998" style in a future template pass.'
+              default: false
+          -
             handle: end_date
             field:
               type: date

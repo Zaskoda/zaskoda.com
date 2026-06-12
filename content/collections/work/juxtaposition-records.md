@@ -25,6 +25,10 @@ achievements:
     type: achievement
     enabled: true
     text: 'Configured CI/CD via GitHub Actions; introduced Agile and Gitflow to the team'
+  -
+    type: achievement
+    enabled: true
+    text: 'Built data pipelines in Laravel; mentored junior engineers'
 tech_stack:
   - laravel
   - php

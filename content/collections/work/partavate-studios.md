@@ -25,6 +25,14 @@ achievements:
     type: achievement
     enabled: true
     text: 'Code archived in the GitHub Arctic Code Vault'
+  -
+    type: achievement
+    enabled: true
+    text: 'Architected a full-stack system with no central server: all game logic in Solidity smart contracts, browser client in Vue 3'
+  -
+    type: achievement
+    enabled: true
+    text: 'Managed multi-chain deployment across 8+ EVM networks; built CI/CD and observability from scratch'
 tech_stack:
   - vue
   - typescript

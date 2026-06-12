@@ -25,6 +25,10 @@ achievements:
     type: achievement
     enabled: true
     text: 'Refactored monolithic apps into containerizable services for cloud deployment'
+  -
+    type: achievement
+    enabled: true
+    text: 'Redesigned admin tooling around specific job roles; shipped several customer-facing features'
 tech_stack:
   - php
   - mysql
@@ -35,4 +39,4 @@ featured: true
 ---
 Card Kingdom buys and sells Magic: The Gathering cards online and is one of North America's largest MTG retailers. I spent five years on the engineering team working across the full stack on e-commerce, administration, fraud prevention, and infrastructure.
 
-I implemented the fraud detection solution that cut credit card losses by more than $100,000 per year, brought the legacy payment codebase into PCI compliance ahead of an audit, and refactored monolithic admin and e-commerce apps into containerizable services. I also redesigned the admin UX around specific job roles, shipped customer-facing e-commerce features, and reduced infrastructure costs through tooling and resource optimization.
+I implemented the fraud detection solution that cut credit card losses by more than $100,000 per year, brought the legacy payment codebase into PCI compliance ahead of an audit, and refactored monolithic admin and e-commerce apps into containerizable services. I also redesigned the admin UX around specific job roles, shipped customer-facing e-commerce features, and reduced infrastructure costs through tooling and resource optimization. High-volume e-commerce with real uptime expectations.
