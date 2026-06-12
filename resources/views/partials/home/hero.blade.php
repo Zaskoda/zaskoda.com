@@ -38,12 +38,9 @@
              style="height: calc({{ $reflectionH }} + 6rem);"></div>
     </div>
 
-    {{-- Text block: centered near the top on small screens; right third, right-aligned at md+ --}}
+    {{-- Text block: near top on mobile; md+ inset 10% from top, 5–10% from right --}}
     <div class="relative z-10 h-screen px-6 md:px-12 lg:px-16">
-        {{-- Outer block sits in the right third at md+; inner block shrink-wraps to the
-             widest line and stays left-aligned, so "This is my website." aligns under
-             "Hello Internet," --}}
-        <div class="flex h-full flex-col items-center pt-[11vh] md:w-1/3 md:ml-auto md:items-end md:justify-center md:pt-0">
+        <div class="flex h-full flex-col items-center pt-[11vh] md:items-end md:pt-[10%] md:pr-[5%] lg:pr-[10%]">
             <div class="flex flex-col items-center text-center md:w-fit md:items-start md:text-left">
                 <h1 class="font-display font-extrabold text-6xl md:text-7xl lg:text-8xl text-cowboy-50 mb-3 drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]">
                     Hello Internet,
