@@ -3,7 +3,7 @@
     min-h-screen + bg-fixed: content scrolls up to reveal the full skyline.
     site.js shifts background-position as the footer enters view; touch gets scroll fallback.
     The photo stays clearly visible — only a top gradient blends in the page content,
-    and the footer content sits in a contained card near the bottom.
+    and the footer content sits in a contained card at the top of the reveal.
 --}}
 <footer
     class="relative min-h-screen bg-cover bg-no-repeat bg-fixed"
@@ -13,8 +13,8 @@
     {{-- Top fade only: blend scrolling page content into the skyline --}}
     <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-ink to-transparent pointer-events-none" aria-hidden="true"></div>
 
-    {{-- Content card anchored near the bottom of the reveal --}}
-    <div class="relative z-10 min-h-screen flex items-end justify-center px-6 pt-[40vh] pb-12 md:pb-16">
+    {{-- Content card at the top of the footer; the skyline reveals below it --}}
+    <div class="relative z-10 min-h-screen flex items-start justify-center px-6 pt-24 md:pt-28 pb-12 md:pb-16">
         <div class="w-full max-w-2xl bg-ink/85 backdrop-blur-sm border border-card-border rounded-lg px-8 py-10 md:px-12 text-center">
             <p class="font-body italic text-cowboy-100 text-lg leading-relaxed whitespace-pre-line">
                 {{ $site_settings['tagline'] ?? '' }}

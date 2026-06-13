@@ -7,7 +7,7 @@
         ->get();
 @endphp
 
-<section class="bg-ink py-20 px-6 md:px-12 lg:px-16">
+<section class="bg-slate py-20 px-6 md:px-12 lg:px-16">
     <div class="max-w-7xl mx-auto">
         @include('partials.section-header', [
             'title' => 'From the Blog',

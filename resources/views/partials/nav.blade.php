@@ -9,17 +9,24 @@
         ['label' => 'About', 'url' => '/about', 'section' => 'about'],
         ['label' => 'Contact', 'url' => '/contact', 'section' => 'contact'],
     ];
+
+    // Home page: nav starts transparent over the hero, turns solid on scroll (site.js)
+    $transparentNav = request()->is('/');
 @endphp
 
-<nav id="site-nav" class="fixed top-0 w-full z-50 bg-ink/90 backdrop-blur-sm border-b border-card-border">
+<nav
+    id="site-nav"
+    class="fixed top-0 w-full z-50 border-b transition-colors duration-300 {{ $transparentNav ? 'bg-transparent border-transparent' : 'bg-ink/90 backdrop-blur-sm border-card-border' }}"
+    @if ($transparentNav) data-nav-transparent @endif
+>
     {{-- Full-bleed header: inner container is wider than the page content column --}}
     <div class="max-w-[96rem] mx-auto px-6 flex items-center justify-between h-14">
 
-        {{-- Logo: zas light, Koda bold, .com light --}}
-        <a href="/" class="flex items-baseline leading-none hover:no-underline">
-            <span class="font-ui font-light text-cowboy-500 text-lg">zas</span>
-            <span class="font-display font-bold text-cowboy-100 text-2xl tracking-tight">Koda</span>
-            <span class="font-ui font-light text-cowboy-500 text-base">.com</span>
+        {{-- Logo: zas light, Koda bold, .com light — even sizing, open tracking --}}
+        <a href="/" class="flex items-baseline leading-none hover:no-underline tracking-[0.06em]">
+            <span class="font-ui font-light text-cowboy-500 text-xl">zas</span>
+            <span class="font-ui font-bold text-cowboy-50 text-xl">Koda</span>
+            <span class="font-ui font-light text-cowboy-500 text-xl">.com</span>
         </a>
 
         {{-- Desktop links --}}

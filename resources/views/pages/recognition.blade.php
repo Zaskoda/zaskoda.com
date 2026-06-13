@@ -95,7 +95,7 @@
     </div>
 </div>
 
-<div class="h-16 bg-gradient-to-b from-ink to-slate" aria-hidden="true"></div>
+@include('partials.surface-fade')
 
 {{-- Talks — Surface B --}}
 <section id="talks" class="bg-slate py-16 scroll-mt-20">
@@ -173,7 +173,7 @@
     </div>
 </section>
 
-<div class="h-16 bg-gradient-to-b from-slate to-ink" aria-hidden="true"></div>
+@include('partials.surface-fade', ['reverse' => true])
 
 {{-- Credits — Surface A --}}
 <section id="credits" class="bg-ink py-16 scroll-mt-20">
@@ -224,7 +224,7 @@
     </div>
 </section>
 
-<div class="h-16 bg-gradient-to-b from-ink to-slate" aria-hidden="true"></div>
+@include('partials.surface-fade')
 
 {{-- Awards — Surface B --}}
 <section id="awards" class="bg-slate py-16 scroll-mt-20">
@@ -261,5 +261,5 @@
     </div>
 </section>
 
-<div class="h-16 bg-gradient-to-b from-slate to-ink" aria-hidden="true"></div>
+@include('partials.surface-fade', ['reverse' => true])
 @endsection

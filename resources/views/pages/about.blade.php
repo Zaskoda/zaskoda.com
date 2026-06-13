@@ -1,9 +1,18 @@
 @extends('layout')
 
 @section('content')
-<div class="max-w-3xl mx-auto px-6 pt-28 pb-20">
-    <h1 class="page-heading mb-14">About</h1>
+{{-- Page header — Surface A --}}
+<div class="bg-ink">
+    <div class="max-w-3xl mx-auto px-6 pt-28 pb-12">
+        <h1 class="page-heading">About</h1>
+    </div>
+</div>
 
+@include('partials.surface-fade')
+
+{{-- Page content — Surface B --}}
+<div class="bg-slate">
+<div class="max-w-3xl mx-auto px-6 pt-12 pb-20">
     <section class="mb-16">
         <h2 class="section-heading text-3xl">The Cyberpunk Cowboy</h2>
         <div class="body-copy space-y-4">
@@ -129,5 +138,6 @@
         </p>
         @include('partials.social-icons', ['class' => 'gap-5', 'iconClass' => 'w-6 h-6', 'iconSize' => 24])
     </section>
+</div>
 </div>
 @endsection

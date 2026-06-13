@@ -24,7 +24,10 @@
     $isVolunteer = in_array($type, ['volunteer', 'academic']);
 @endphp
 
-<article class="max-w-3xl mx-auto px-6 pt-28 pb-20">
+<article>
+{{-- Role header — Surface A --}}
+<div class="bg-ink">
+    <div class="max-w-3xl mx-auto px-6 pt-28 pb-10">
 
     @if ($logo)
         <img src="{{ $logo->url() }}" alt="{{ $entry->title }} logo" class="h-16 mb-8 object-contain">
@@ -37,6 +40,14 @@
         @if ($entry->value('location')) · {{ $entry->value('location') }} @endif
         @if ($type) · {{ $typeLabels[$type] ?? $type }} @endif
     </p>
+    </div>
+</div>
+
+@include('partials.surface-fade')
+
+{{-- Role body — Surface B --}}
+<div class="bg-slate">
+    <div class="max-w-3xl mx-auto px-6 pt-12 pb-20">
 
     <div class="prose prose-invert font-body max-w-none mb-10">
         {!! $entry->augmentedValue('content') !!}
@@ -70,5 +81,7 @@
     @endif
 
     <a href="/work" class="font-ui text-sm">&larr; All work</a>
+    </div>
+</div>
 </article>
 @endsection

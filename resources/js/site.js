@@ -7,12 +7,67 @@ function onReady(fn) {
 
 onReady(() => {
     initMobileNav();
+    initTransparentNav();
     initHeroParallax();
     initFooterReveal();
     initEntryFilters('[data-project-card]');
     initEntryFilters('[data-work-card]');
     initPostLightbox();
 });
+
+/*
+ * Home page nav: transparent over the hero, solid once the user scrolls.
+ * The nav renders with the transparent classes server-side; this swaps them
+ * for the solid set past a small scroll threshold (and back).
+ */
+function initTransparentNav() {
+    const nav = document.querySelector('[data-nav-transparent]');
+    if (!nav) return;
+
+    const clear = ['bg-transparent', 'border-transparent'];
+    const solid = ['bg-ink/90', 'backdrop-blur-sm', 'border-card-border'];
+    let isSolid = false;
+
+    function update() {
+        const shouldBeSolid = window.scrollY > 24;
+        if (shouldBeSolid === isSolid) return;
+        isSolid = shouldBeSolid;
+        nav.classList.remove(...(shouldBeSolid ? clear : solid));
+        nav.classList.add(...(shouldBeSolid ? solid : clear));
+        // .nav--solid drives the link/icon colors (dark over the photo, normal when solid)
+        nav.classList.toggle('nav--solid', shouldBeSolid);
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+}
+
+/*
+ * Hero parallax (old-site mechanism): pan the photo's background-position down
+ * at 1/3 scroll speed, so it appears to scroll slower than the page. The 35%
+ * base keeps the boat framed at rest on wide viewports.
+ */
+function initHeroParallax() {
+    const bg = document.querySelector('[data-hero-bg]');
+    if (!bg) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    let ticking = false;
+
+    function update() {
+        bg.style.backgroundPosition = `center calc(35% + ${window.scrollY / 3}px)`;
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(update);
+            ticking = true;
+        }
+    }, { passive: true });
+
+    update();
+}
 
 /*
  * Lightbox for blog post images.
@@ -50,46 +105,6 @@ function initMobileNav() {
         menu.classList.toggle('hidden');
         button.setAttribute('aria-expanded', String(!isOpen));
     });
-}
-
-/*
- * Effect 1 — Hero parallax.
- * The layer (photo + reflection) translates DOWN at 0.6x scroll, so the image
- * appears to scroll at ~40% of page speed. The ~1.15 overscan lives on the photo
- * elements themselves; the section's static bottom fade guarantees no seam.
- */
-function initHeroParallax() {
-    const layer = document.querySelector('[data-hero-parallax]');
-    const play = document.querySelector('[data-hero-play]');
-    if (!layer) return;
-
-    let ticking = false;
-
-    function update() {
-        const y = window.scrollY;
-        const offset = y * 0.6;
-
-        layer.style.transform = `translate3d(0, ${offset}px, 0)`;
-
-        if (play) {
-            const playScale = Math.max(0, 1 - y * 0.003);
-            const playOpacity = Math.max(0, 1 - y * 0.005);
-            play.style.transform = `scale(${playScale})`;
-            play.style.opacity = playOpacity;
-            play.style.pointerEvents = playOpacity <= 0 ? 'none' : '';
-        }
-
-        ticking = false;
-    }
-
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            window.requestAnimationFrame(update);
-            ticking = true;
-        }
-    }, { passive: true });
-
-    update();
 }
 
 /*

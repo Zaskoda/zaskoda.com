@@ -6,13 +6,16 @@
 
         {{-- Inline first: Firefox may paint before external CSS finishes downloading --}}
         <style>
-            html, body { background-color: #100d09; color: #ede0cc; margin: 0; }
+            html, body { background-color: #131720; color: #ede0cc; margin: 0; }
             /* Link default goes in the base layer so Tailwind utilities can override it */
             @layer base {
                 a { color: #d4854f; text-decoration: none; }
             }
             svg { display: inline-block; vertical-align: middle; max-width: none; }
-            #site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background-color: rgba(16, 13, 9, 0.92); border-bottom: 1px solid #2e2820; }
+            /* Nav colors stay out of the transparent-nav home page: this rule is
+               unlayered, so it would beat the Tailwind utilities that site.js toggles */
+            #site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; }
+            #site-nav:not([data-nav-transparent]) { background-color: rgba(19, 23, 32, 0.92); border-bottom: 1px solid #33404a; }
         </style>
 
         {{-- Blocking stylesheet in <head> (never at bottom — that guarantees a flash) --}}

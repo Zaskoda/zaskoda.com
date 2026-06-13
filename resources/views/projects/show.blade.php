@@ -22,7 +22,10 @@
     $status = $entry->value('status');
 @endphp
 
-<article class="max-w-3xl mx-auto px-6 pt-28 pb-20">
+<article>
+{{-- Project header — Surface A --}}
+<div class="bg-ink">
+    <div class="max-w-3xl mx-auto px-6 pt-28 pb-10">
 
     @if ($hero)
         <img src="{{ $hero->url() }}" alt="{{ $entry->title }}" class="w-full aspect-video object-cover rounded-lg border border-cowboy-600 mb-10">
@@ -46,6 +49,14 @@
         {{ $startYear }}{{ $endYear ? ' - ' . $endYear : '' }}
         @if ($status) · <span class="{{ $status === 'active' ? 'text-circuit-400' : '' }}">{{ $statusLabels[$status] ?? $status }}</span> @endif
     </p>
+    </div>
+</div>
+
+@include('partials.surface-fade')
+
+{{-- Project body — Surface B --}}
+<div class="bg-slate">
+    <div class="max-w-3xl mx-auto px-6 pt-12 pb-20">
 
     <div class="prose prose-invert font-body max-w-none mb-10">
         {!! $entry->augmentedValue('content') !!}
@@ -106,5 +117,7 @@
     @endif
 
     <a href="/projects" class="font-ui text-sm">&larr; All projects</a>
+    </div>
+</div>
 </article>
 @endsection

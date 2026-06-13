@@ -63,14 +63,16 @@
     ];
 @endphp
 
-<div class="max-w-5xl mx-auto px-6 md:px-12 pt-28 pb-20">
+{{-- Page header — Surface A --}}
+<div class="bg-ink">
+    <div class="max-w-5xl mx-auto px-6 md:px-12 pt-28 pb-16">
     <h1 class="page-heading mb-4">Work</h1>
     <p class="body-copy text-lg mb-10 max-w-2xl">
         Thirty years of building: studios, startups, retailers, nonprofits, and a couple of
         companies of my own.
     </p>
 
-    <div class="space-y-3 mb-12">
+    <div class="space-y-3">
         {{-- Row 1: employment type (select field, not taxonomy) --}}
         <div class="flex flex-wrap gap-2" data-filter-group="type">
             <button class="font-ui text-xs px-3 py-1.5 rounded border border-copper-600 text-copper-400 transition-colors" data-filter-all aria-pressed="true">All</button>
@@ -101,6 +103,14 @@
             @endforeach
         </div>
     </div>
+    </div>
+</div>
+
+@include('partials.surface-fade')
+
+{{-- Work history — Surface B --}}
+<section class="bg-slate">
+    <div class="max-w-5xl mx-auto px-6 md:px-12 pt-12 pb-20">
 
     <p class="font-ui text-sm text-cowboy-500 hidden mb-6" data-filter-empty>Nothing matches that combination.</p>
 
@@ -153,5 +163,6 @@
             </article>
         @endforeach
     </div>
-</div>
+    </div>
+</section>
 @endsection

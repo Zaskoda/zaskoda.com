@@ -4,14 +4,15 @@
 @source "../../content";
 
 @theme {
-    /* Surfaces — the two alternating section backgrounds */
-    --color-ink: #100d09;     /* warm near-black (Surface A) */
-    --color-slate: #0d1719;   /* deep teal-charcoal (Surface B) */
+    /* Surfaces — cool field pulled from the hero/footer photos; warmth lives in
+       text, copper, and cards (teal–orange complementary, like the photos) */
+    --color-ink: #131720;     /* dark blue-grey (Surface A) */
+    --color-slate: #10232b;   /* teal charcoal (Surface B) */
 
-    /* Card surfaces — desaturated from the old brown so copper does the warm work */
-    --color-card: #181410;
-    --color-card-border: #2e2820;
-    --color-card-hover: #1f1a14;
+    /* Card surfaces — cool steel elevation step above both surfaces */
+    --color-card: #1c232b;
+    --color-card-border: #33404a;
+    --color-card-hover: #243039;
 
     /* Campfire-at-night: near-black page, warm card step, cream text */
     --color-cowboy-950: #0a0806;
@@ -19,7 +20,7 @@
     --color-cowboy-800: #241a10;
     --color-cowboy-700: #2a1e13;
     --color-cowboy-600: #4a3828;
-    --color-cowboy-500: #7a6040;
+    --color-cowboy-500: #8d7350;
     --color-cowboy-300: #c4a882;
     --color-cowboy-100: #ede0cc;
     --color-cowboy-50: #faf5ec;
@@ -123,7 +124,7 @@
     }
 
     .nav-link {
-        @apply font-ui text-sm text-cowboy-100 px-2.5 py-1.5 rounded-md
+        @apply font-ui text-sm md:text-[0.9375rem] md:font-medium text-cowboy-100 px-2.5 py-1.5 rounded-md
                transition-colors duration-200;
     }
 
@@ -203,4 +204,26 @@
     --tw-prose-hr: var(--color-cowboy-600);
     --tw-prose-quotes: var(--color-cowboy-100);
     --tw-prose-quote-borders: var(--color-circuit-500);
+}
+
+/* Transparent nav over the home hero: dark elements for contrast against the
+   bright photo. site.js adds .nav--solid past the scroll threshold, restoring
+   the normal light-on-dark colors. Unlayered so it outranks the color
+   utilities on the logo spans and social icons. The mobile dropdown panel is
+   excluded — it paints its own solid bg-ink surface. */
+#site-nav[data-nav-transparent]:not(.nav--solid) a:not([data-nav-menu] a),
+#site-nav[data-nav-transparent]:not(.nav--solid) a:not([data-nav-menu] a) span,
+#site-nav[data-nav-transparent]:not(.nav--solid) button[data-nav-toggle] {
+    color: var(--color-ink);
+    text-shadow: none;
+}
+
+#site-nav[data-nav-transparent]:not(.nav--solid) a:not([data-nav-menu] a):hover,
+#site-nav[data-nav-transparent]:not(.nav--solid) button[data-nav-toggle]:hover {
+    color: var(--color-copper-700);
+    text-shadow: none;
+}
+
+#site-nav[data-nav-transparent]:not(.nav--solid) .nav-link:hover {
+    background-color: rgba(250, 245, 236, 0.35);
 }

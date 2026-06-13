@@ -30,14 +30,16 @@
     }
 @endphp
 
-<div class="max-w-7xl mx-auto px-6 md:px-12 pt-28 pb-20">
-    <h1 class="page-heading mb-4">Projects</h1>
-    <p class="body-copy text-lg mb-10 max-w-2xl">
-        Software, art installations, robots, vehicles, and community platforms. Everything here
-        was built, not bought.
-    </p>
+{{-- Page header — Surface A --}}
+<div class="bg-ink">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 pt-28 pb-16">
+        <h1 class="page-heading mb-4">Projects</h1>
+        <p class="body-copy text-lg mb-10 max-w-2xl">
+            Software, art installations, robots, vehicles, and community platforms. Everything here
+            was built, not bought.
+        </p>
 
-    <div class="space-y-3 mb-12">
+        <div class="space-y-3">
         <div class="flex flex-wrap gap-2" data-filter-group="types">
             <button class="font-ui text-xs px-3 py-1.5 rounded border border-copper-600 text-copper-400 transition-colors" data-filter-all aria-pressed="true">All</button>
             @foreach ($projectTypes as $term)
@@ -54,8 +56,15 @@
                 @endif
             @endforeach
         </div>
+        </div>
     </div>
+</div>
 
+@include('partials.surface-fade')
+
+{{-- Project grid — Surface B --}}
+<section class="bg-slate">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 pt-12 pb-20">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         @foreach ($projects as $entry)
             @php
@@ -96,5 +105,6 @@
             </article>
         @endforeach
     </div>
-</div>
+    </div>
+</section>
 @endsection
