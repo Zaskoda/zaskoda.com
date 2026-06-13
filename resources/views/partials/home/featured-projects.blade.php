@@ -4,7 +4,7 @@
         ->where('published', true)
         ->where('featured', true)
         ->orderBy('featured_order', 'asc')
-        ->limit(4)
+        ->limit(6)
         ->get();
 @endphp
 

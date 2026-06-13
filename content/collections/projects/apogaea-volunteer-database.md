@@ -24,8 +24,6 @@ project_type:
 context:
   - nonprofit
   - professional
-featured: true
-featured_order: 3
 ---
 
 An open-source volunteer management system built for Apogaea Inc., the nonprofit that produces Colorado's regional Burning Man event. The system manages more than 1,000 volunteers across complex shift and role assignments, and integrates ODK Collect for offline field data gathering.

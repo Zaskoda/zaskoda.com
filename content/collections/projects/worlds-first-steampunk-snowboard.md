@@ -2,6 +2,8 @@
 id: project-worlds-first-steampunk-snowboard
 blueprint: project
 title: 'World''s First Steampunk Snowboard'
+featured: true
+featured_order: 4
 tagline: 'Built in one evening, demoed at Arapahoe Basin the next day.'
 date: '2009-01-01'
 status: completed

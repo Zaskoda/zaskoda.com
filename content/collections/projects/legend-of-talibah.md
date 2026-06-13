@@ -2,6 +2,8 @@
 id: project-legend-of-talibah
 blueprint: project
 title: 'The Legend of Talibah'
+featured: true
+featured_order: 6
 tagline: 'The high school game whose weekly dev updates became blogging before the word existed.'
 date: '1996-01-01'
 status: archived

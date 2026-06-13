@@ -2,6 +2,9 @@
 id: project-gaia-community-platform
 blueprint: project
 title: 'Gaia.com Community Platform'
+featured: true
+featured_order: 5
+hero_image: projects/gaia-community-platform.png
 tagline: 'A custom online community that grew to 700,000 members in nine months.'
 date: '2007-01-01'
 date_end: '2008-12-31'

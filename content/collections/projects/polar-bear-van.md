@@ -36,7 +36,7 @@ project_type:
 context:
   - personal
 featured: true
-featured_order: 4
+featured_order: 3
 ---
 
 Polar Bear was a 1987 Ford E250 4x4 van purchased in South Lake Tahoe in October 2009 and driven 1,500 miles home to Boulder. Over 12 years it became a full overland camper build: 6-8 inch lift, custom cabinetry and kitchen, propane heat, full electrical system with house battery, roof top tent, and rock sliders that once anchored a self-recovery from a ravine.
