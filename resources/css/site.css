@@ -192,6 +192,15 @@
     .post-body {
         display: flow-root;
     }
+
+    /* Anchor the lightbox JS wraps around a bare content image (project pages).
+       Block so it preserves the image's place in grids and flow; zoom cursor
+       signals it's clickable. Classes are added in JS, so the rule lives here
+       rather than relying on Tailwind to scan for utilities. */
+    .lightbox-wrap {
+        display: block;
+        cursor: zoom-in;
+    }
 }
 
 .prose.prose-invert {

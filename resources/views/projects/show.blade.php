@@ -22,7 +22,7 @@
     $status = $entry->value('status');
 @endphp
 
-<article>
+<article data-lightbox-region>
 {{-- Project header — Surface A --}}
 <div class="bg-ink">
     <div class="max-w-3xl mx-auto px-6 pt-28 pb-10">

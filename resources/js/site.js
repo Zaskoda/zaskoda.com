@@ -12,7 +12,7 @@ onReady(() => {
     initFooterReveal();
     initEntryFilters('[data-project-card]');
     initEntryFilters('[data-work-card]');
-    initPostLightbox();
+    initLightbox();
 });
 
 /*
@@ -70,27 +70,54 @@ function initHeroParallax() {
 }
 
 /*
- * Lightbox for blog post images.
- * Targets anchors in .post-body that wrap an image and link to a local asset
- * image file. GLightbox (and its CSS) is lazy-loaded only when such links
- * exist, so non-post pages don't pay for it.
+ * Lightbox for content images — blog posts (.post-body) and project pages
+ * ([data-lightbox-region]). Blog images arrive pre-wrapped in <a href="full">
+ * links from the WordPress import; project images are bare <img> tags, so we
+ * wrap each in a link to its own full-size source. Either way the anchor
+ * becomes a GLightbox trigger. Only local /assets/ images qualify, so dead or
+ * external embeds are left alone. GLightbox is lazy-loaded only when triggers
+ * exist, so other pages don't pay for it.
  */
-function initPostLightbox() {
-    const links = [...document.querySelectorAll('.post-body a[href^="/assets/"]')]
-        .filter((a) => /\.(png|jpe?g|gif|webp)$/i.test(a.getAttribute('href')) && a.querySelector('img'));
-    if (!links.length) return;
+function initLightbox() {
+    const regions = document.querySelectorAll('.post-body, [data-lightbox-region]');
+    if (!regions.length) return;
 
-    links.forEach((a) => {
-        a.classList.add('post-lightbox');
-        const caption = a.getAttribute('title') || a.querySelector('img').getAttribute('alt');
-        if (caption) a.setAttribute('data-glightbox', `title: ${caption}`);
+    const isAssetImage = (url) => !!url && /^\/assets\/.*\.(png|jpe?g|gif|webp)(\?|#|$)/i.test(url);
+
+    const items = [];
+    regions.forEach((region) => {
+        region.querySelectorAll('img').forEach((img) => {
+            const link = img.closest('a');
+            let trigger;
+
+            if (link) {
+                // Already wrapped (blog) — lightbox only links to local asset images.
+                if (!isAssetImage(link.getAttribute('href'))) return;
+                trigger = link;
+            } else {
+                // Bare image (project) — wrap it in a link to its own full-size source.
+                if (!isAssetImage(img.getAttribute('src'))) return;
+                trigger = document.createElement('a');
+                trigger.href = img.getAttribute('src');
+                trigger.className = 'lightbox-wrap';
+                img.replaceWith(trigger);
+                trigger.appendChild(img);
+            }
+
+            trigger.classList.add('lightbox-item');
+            const caption = trigger.getAttribute('title') || img.getAttribute('alt');
+            if (caption) trigger.setAttribute('data-glightbox', `title: ${caption}`);
+            items.push(trigger);
+        });
     });
+
+    if (!items.length) return;
 
     Promise.all([
         import('glightbox'),
         import('glightbox/dist/css/glightbox.min.css'),
     ]).then(([{ default: GLightbox }]) => {
-        GLightbox({ selector: '.post-lightbox', loop: false });
+        GLightbox({ selector: '.lightbox-item', loop: false });
     });
 }
 
