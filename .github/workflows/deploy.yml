@@ -6,7 +6,7 @@ on:
   workflow_dispatch:  # allows manual triggering from the Actions tab
 
 concurrency:
-  group: production
+  group: zaskoda-production
   cancel-in-progress: false
 
 jobs:
