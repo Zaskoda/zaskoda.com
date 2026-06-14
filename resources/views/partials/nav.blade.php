@@ -10,13 +10,13 @@
         ['label' => 'Contact', 'url' => '/contact', 'section' => 'contact'],
     ];
 
-    // Home page: nav starts transparent over the hero, turns solid on scroll (site.js)
+    // Home page: nav starts mostly transparent over the hero, turns solid on scroll (site.js)
     $transparentNav = request()->is('/');
 @endphp
 
 <nav
     id="site-nav"
-    class="fixed top-0 w-full z-50 border-b transition-colors duration-300 {{ $transparentNav ? 'bg-transparent border-transparent' : 'bg-ink/90 backdrop-blur-sm border-card-border' }}"
+    class="fixed top-0 w-full z-50 border-b transition-colors duration-300 {{ $transparentNav ? 'bg-white/20 border-transparent' : 'bg-ink/90 backdrop-blur-sm border-card-border' }}"
     @if ($transparentNav) data-nav-transparent @endif
 >
     {{-- Full-bleed header: inner container is wider than the page content column --}}

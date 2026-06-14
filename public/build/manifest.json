@@ -4,7 +4,7 @@
     "src": "node_modules/glightbox/dist/css/glightbox.min.css"
   },
   "node_modules/glightbox/dist/js/glightbox.min.js": {
-    "file": "assets/glightbox.min-gY6ECFuM.js",
+    "file": "assets/glightbox.min-Dh3dSaw7.js",
     "name": "glightbox.min",
     "src": "node_modules/glightbox/dist/js/glightbox.min.js",
     "isDynamicEntry": true,
@@ -13,7 +13,7 @@
     ]
   },
   "resources/css/site.css": {
-    "file": "assets/site-pKo6MZCg.css",
+    "file": "assets/site-D3Zyl_yn.css",
     "name": "site",
     "names": [
       "site.css"
@@ -22,7 +22,7 @@
     "isEntry": true
   },
   "resources/js/site.js": {
-    "file": "assets/site-BfcYlDwm.js",
+    "file": "assets/site-CW4n3UL5.js",
     "name": "site",
     "src": "resources/js/site.js",
     "isEntry": true,

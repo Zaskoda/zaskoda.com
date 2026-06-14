@@ -16,15 +16,15 @@ onReady(() => {
 });
 
 /*
- * Home page nav: transparent over the hero, solid once the user scrolls.
- * The nav renders with the transparent classes server-side; this swaps them
+ * Home page nav: mostly transparent over the hero, solid once the user scrolls.
+ * The nav renders with the subtle white tint server-side; this swaps it
  * for the solid set past a small scroll threshold (and back).
  */
 function initTransparentNav() {
     const nav = document.querySelector('[data-nav-transparent]');
     if (!nav) return;
 
-    const clear = ['bg-transparent', 'border-transparent'];
+    const clear = ['bg-white/20', 'border-transparent'];
     const solid = ['bg-ink/90', 'backdrop-blur-sm', 'border-card-border'];
     let isSolid = false;
 
