@@ -88,95 +88,17 @@
         </p>
 
         <nav class="flex flex-wrap gap-2" aria-label="Recognition sections">
-            <a href="#talks" class="font-ui text-xs px-3 py-1.5 rounded border border-copper-600 text-copper-400 hover:bg-cowboy-800 transition-colors">Talks &amp; Appearances</a>
             <a href="#credits" class="font-ui text-xs px-3 py-1.5 rounded border border-copper-600 text-copper-400 hover:bg-cowboy-800 transition-colors">Game Credits</a>
             <a href="#awards" class="font-ui text-xs px-3 py-1.5 rounded border border-copper-600 text-copper-400 hover:bg-cowboy-800 transition-colors">Awards &amp; Grants</a>
+            <a href="#talks" class="font-ui text-xs px-3 py-1.5 rounded border border-copper-600 text-copper-400 hover:bg-cowboy-800 transition-colors">Talks &amp; Appearances</a>
         </nav>
     </div>
 </div>
 
 @include('partials.surface-fade')
 
-{{-- Talks — Surface B --}}
-<section id="talks" class="bg-slate py-16 scroll-mt-20">
-    <div class="max-w-5xl mx-auto px-6 md:px-12">
-        @include('partials.section-header', ['title' => 'Talks & Appearances'])
-
-        <div class="space-y-6 mt-10">
-            @foreach ($talks as $talk)
-                @php
-                    $eventUrl = $linkUrl($talk->value('event_url'));
-                    $videoUrl = $linkUrl($talk->value('video_url'));
-                    $slidesUrl = $linkUrl($talk->value('slides_url'));
-                    $relatedProject = $resolveEntry($talk->value('related_project'));
-                    $relatedWork = $resolveEntry($talk->value('related_work'));
-                    $talkType = $talk->value('talk_type');
-                    $hasContent = ! empty($talk->value('content'));
-                    $talkDate = $talk->value('date') ? \Carbon\Carbon::parse($talk->value('date'))->format('F Y') : null;
-                @endphp
-                <article class="surface-card p-6 md:p-8">
-                    <div class="flex flex-wrap items-start gap-3 mb-3">
-                        <h3 class="font-ui font-semibold text-xl text-cowboy-100">
-                            @if ($hasContent)
-                                <a href="{{ $talk->url() }}" class="text-cowboy-100 hover:text-copper-400">{{ $talk->title }}</a>
-                            @else
-                                {{ $talk->title }}
-                            @endif
-                        </h3>
-                        @if ($talkType)
-                            <span class="badge-warm">{{ $talkTypeLabels[$talkType] ?? $talkType }}</span>
-                        @endif
-                    </div>
-
-                    <p class="meta-text text-sm mb-3">
-                        @if ($eventUrl)
-                            <a href="{{ $eventUrl }}" target="_blank" rel="noopener" class="text-copper-400 hover:text-copper-300">{{ $talk->value('event') }}</a>
-                        @else
-                            {{ $talk->value('event') }}
-                        @endif
-                        @if ($talkDate)
-                            · {{ $talkDate }}
-                        @endif
-                        @if ($talk->value('location'))
-                            · {{ $talk->value('location') }}
-                        @endif
-                    </p>
-
-                    @if ($talk->value('representing'))
-                        <p class="font-ui text-sm text-cowboy-300 mb-1">Representing: {{ $talk->value('representing') }}</p>
-                    @endif
-                    @if ($talk->value('co_presenter'))
-                        <p class="font-ui text-sm text-cowboy-300 mb-3">With: {{ $talk->value('co_presenter') }}</p>
-                    @endif
-
-                    @if ($talk->value('summary'))
-                        <p class="body-copy text-base mb-4">{{ $talk->value('summary') }}</p>
-                    @endif
-
-                    <div class="flex flex-wrap gap-x-4 gap-y-2 font-ui text-sm">
-                        @if ($videoUrl)
-                            <a href="{{ $videoUrl }}" target="_blank" rel="noopener" class="text-copper-400 hover:text-copper-300">Watch recording &rarr;</a>
-                        @endif
-                        @if ($slidesUrl)
-                            <a href="{{ $slidesUrl }}" target="_blank" rel="noopener" class="text-copper-400 hover:text-copper-300">View slides &rarr;</a>
-                        @endif
-                        @if ($relatedProject)
-                            <a href="{{ $relatedProject->url() }}" class="text-copper-400 hover:text-copper-300">Related: {{ $relatedProject->title }} &rarr;</a>
-                        @endif
-                        @if ($relatedWork)
-                            <a href="{{ $relatedWork->url() }}" class="text-copper-400 hover:text-copper-300">Related: {{ $relatedWork->title }} &rarr;</a>
-                        @endif
-                    </div>
-                </article>
-            @endforeach
-        </div>
-    </div>
-</section>
-
-@include('partials.surface-fade', ['reverse' => true])
-
-{{-- Credits — Surface A --}}
-<section id="credits" class="bg-ink py-16 scroll-mt-20">
+{{-- Credits — Surface B --}}
+<section id="credits" class="bg-slate py-16 scroll-mt-20">
     <div class="max-w-5xl mx-auto px-6 md:px-12">
         @include('partials.section-header', ['title' => 'Game Credits'])
 
@@ -224,10 +146,10 @@
     </div>
 </section>
 
-@include('partials.surface-fade')
+@include('partials.surface-fade', ['reverse' => true])
 
-{{-- Awards — Surface B --}}
-<section id="awards" class="bg-slate py-16 scroll-mt-20">
+{{-- Awards — Surface A --}}
+<section id="awards" class="bg-ink py-16 scroll-mt-20">
     <div class="max-w-5xl mx-auto px-6 md:px-12">
         @include('partials.section-header', ['title' => 'Awards & Grants'])
 
@@ -254,6 +176,113 @@
                             For:
                             <a href="{{ $award['parent']->url() }}" class="text-copper-400 hover:text-copper-300">{{ $award['parent']->title }}</a>
                         </p>
+                    </div>
+                </article>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+@include('partials.surface-fade')
+
+{{-- Talks — Surface B --}}
+<section id="talks" class="bg-slate py-16 scroll-mt-20">
+    <div class="max-w-5xl mx-auto px-6 md:px-12">
+        @include('partials.section-header', ['title' => 'Talks & Appearances'])
+
+        <div class="space-y-6 mt-10">
+            @foreach ($talks as $talk)
+                @php
+                    $eventUrl = $linkUrl($talk->value('event_url'));
+                    $videoUrl = $linkUrl($talk->value('video_url'));
+                    $slidesUrl = $linkUrl($talk->value('slides_url'));
+                    $relatedProject = $resolveEntry($talk->value('related_project'));
+                    $relatedWork = $resolveEntry($talk->value('related_work'));
+                    $talkType = $talk->value('talk_type');
+                    $hasContent = ! empty($talk->value('content'));
+                    $talkDate = $talk->value('date') ? \Carbon\Carbon::parse($talk->value('date'))->format('F Y') : null;
+                    $appearances = collect($talk->value('appearances') ?? [])->filter(fn ($item) => ! empty($item['event']));
+                @endphp
+                <article class="surface-card p-6 md:p-8">
+                    <div class="flex flex-wrap items-start gap-3 mb-3">
+                        <h3 class="font-ui font-semibold text-xl text-cowboy-100">
+                            @if ($hasContent)
+                                <a href="{{ $talk->url() }}" class="text-cowboy-100 hover:text-copper-400">{{ $talk->title }}</a>
+                            @else
+                                {{ $talk->title }}
+                            @endif
+                        </h3>
+                        @if ($talkType)
+                            <span class="badge-warm">{{ $talkTypeLabels[$talkType] ?? $talkType }}</span>
+                        @endif
+                    </div>
+
+                    <p class="meta-text text-sm mb-3">
+                        @if ($eventUrl)
+                            <a href="{{ $eventUrl }}" target="_blank" rel="noopener" class="text-copper-400 hover:text-copper-300">{{ $talk->value('event') }}</a>
+                        @else
+                            {{ $talk->value('event') }}
+                        @endif
+                        @if ($talkDate)
+                            · {{ $talkDate }}
+                        @endif
+                        @if ($talk->value('location'))
+                            · {{ $talk->value('location') }}
+                        @endif
+                    </p>
+
+                    @if ($talk->value('representing'))
+                        <p class="font-ui text-sm text-cowboy-300 mb-1">Representing: {{ $talk->value('representing') }}</p>
+                    @endif
+                    @if ($talk->value('co_presenter'))
+                        <p class="font-ui text-sm text-cowboy-300 mb-3">With: {{ $talk->value('co_presenter') }}</p>
+                    @endif
+
+                    @if ($talk->value('summary'))
+                        <p class="body-copy text-base mb-4">{{ $talk->value('summary') }}</p>
+                    @endif
+
+                    @if ($appearances->isNotEmpty())
+                        <div class="mb-4">
+                            <p class="font-ui text-sm text-cowboy-300 mb-2">Recordings:</p>
+                            <ul class="space-y-2 font-ui text-sm">
+                                @foreach ($appearances as $appearance)
+                                    @php
+                                        $appearanceVideoUrl = $linkUrl($appearance['video_url'] ?? null);
+                                        $appearanceDate = ! empty($appearance['date'])
+                                            ? \Carbon\Carbon::parse($appearance['date'])->format('F Y')
+                                            : null;
+                                    @endphp
+                                    <li class="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                                        <span class="text-cowboy-500">&rarr;</span>
+                                        <span class="text-cowboy-300">
+                                            {{ $appearance['event'] }}@if ($appearanceDate), {{ $appearanceDate }}@endif
+                                        </span>
+                                        @if ($appearanceVideoUrl)
+                                            <a href="{{ $appearanceVideoUrl }}" target="_blank" rel="noopener" class="text-copper-400 hover:text-copper-300">Watch &rarr;</a>
+                                        @endif
+                                        @if (! empty($appearance['note']))
+                                            <span class="w-full text-cowboy-500 text-xs">{{ $appearance['note'] }}</span>
+                                        @endif
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+
+                    <div class="flex flex-wrap gap-x-4 gap-y-2 font-ui text-sm">
+                        @if ($videoUrl && $appearances->isEmpty())
+                            <a href="{{ $videoUrl }}" target="_blank" rel="noopener" class="text-copper-400 hover:text-copper-300">Watch recording &rarr;</a>
+                        @endif
+                        @if ($slidesUrl)
+                            <a href="{{ $slidesUrl }}" target="_blank" rel="noopener" class="text-copper-400 hover:text-copper-300">View slides &rarr;</a>
+                        @endif
+                        @if ($relatedProject)
+                            <a href="{{ $relatedProject->url() }}" class="text-copper-400 hover:text-copper-300">Related: {{ $relatedProject->title }} &rarr;</a>
+                        @endif
+                        @if ($relatedWork)
+                            <a href="{{ $relatedWork->url() }}" class="text-copper-400 hover:text-copper-300">Related: {{ $relatedWork->title }} &rarr;</a>
+                        @endif
                     </div>
                 </article>
             @endforeach

@@ -88,3 +88,41 @@ fields:
       collections:
         - work
       max_items: 1
+  -
+    handle: appearances
+    field:
+      type: replicator
+      display: 'Appearances (for series-type entries)'
+      sets:
+        main:
+          display: Appearances
+          sets:
+            appearance:
+              display: Appearance
+              fields:
+                -
+                  handle: event
+                  field:
+                    type: text
+                    display: 'Event / Venue'
+                -
+                  handle: date
+                  field:
+                    type: date
+                    display: Date
+                    time_enabled: false
+                -
+                  handle: location
+                  field:
+                    type: text
+                    display: Location
+                -
+                  handle: video_url
+                  field:
+                    type: link
+                    display: 'Recording URL'
+                -
+                  handle: note
+                  field:
+                    type: text
+                    display: 'Short note (optional)'
