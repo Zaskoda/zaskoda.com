@@ -1,20 +1,24 @@
 {{--
     Hero — structural composition with old-site parallax.
-    site.js pans the photo's background-position down at 1/3 scroll speed (the
-    exact mechanism the 2016 theme used), so the photo appears to scroll slower
-    than the page. The gap this opens above the image grows slower than the hero
-    leaves the viewport, so it can never become visible — no overscan needed.
+    site.js pans the photo at 1/3 scroll speed via object-position on an <img>
+    (the direct equivalent of the former background-position pan), so framing and
+    scale stay identical at rest. Updates run only while the hero is on screen.
     Solid translucent bars top (nav) and bottom (caption) frame the photo.
 --}}
-<section class="relative bg-ink" data-hero style="height: 85svh;">
+<section class="relative overflow-hidden bg-ink" data-hero style="height: 85svh;">
 
-    <div
-        class="absolute inset-0 bg-cover bg-no-repeat"
-        style="background-image: url('/assets/photos/hero-alaska-boat.jpg'); background-position: center 35%;"
-        data-hero-bg
-        role="img"
-        aria-label="A hand-carved wooden boat with a feather sail, held up at the shore in Alaska"
-    ></div>
+    <div class="absolute inset-0 overflow-hidden" data-hero-bg>
+        <img
+            src="/assets/photos/hero-alaska-boat.jpg"
+            alt="A hand-carved wooden boat with a feather sail, held up at the shore in Alaska"
+            width="1600"
+            height="947"
+            fetchpriority="high"
+            decoding="async"
+            data-hero-img
+            class="absolute inset-0 h-full w-full object-cover object-[center_35%] pointer-events-none select-none"
+        >
+    </div>
 
     {{-- Text block: 10% from the top when centered (clear of the boat); vertically
          centered over the open water right of center at lg+ --}}

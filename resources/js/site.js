@@ -43,28 +43,43 @@ function initTransparentNav() {
 }
 
 /*
- * Hero parallax (old-site mechanism): pan the photo's background-position down
- * at 1/3 scroll speed, so it appears to scroll slower than the page. The 35%
- * base keeps the boat framed at rest on wide viewports.
+ * Hero parallax: pan the photo at 1/3 scroll speed so it appears to scroll
+ * slower than the page. Uses object-position on an <img> (same math as the old
+ * background-position approach) to preserve the center 35% crop at rest. Updates
+ * are clamped to the hero height and skipped once the hero leaves the viewport.
  */
 function initHeroParallax() {
-    const bg = document.querySelector('[data-hero-bg]');
-    if (!bg) return;
+    const hero = document.querySelector('[data-hero]');
+    const img = document.querySelector('[data-hero-img]');
+    if (!hero || !img) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
+    const basePosition = 35;
+    let isVisible = true;
     let ticking = false;
 
+    const observer = new IntersectionObserver(
+        ([entry]) => { isVisible = entry.isIntersecting; },
+        { threshold: 0 },
+    );
+    observer.observe(hero);
+
     function update() {
-        bg.style.backgroundPosition = `center calc(35% + ${window.scrollY / 3}px)`;
         ticking = false;
+        if (!isVisible) return;
+
+        const offset = Math.min(window.scrollY, hero.offsetHeight) / 3;
+        img.style.objectPosition = `center calc(${basePosition}% + ${offset}px)`;
     }
 
     window.addEventListener('scroll', () => {
         if (!ticking) {
-            window.requestAnimationFrame(update);
+            requestAnimationFrame(update);
             ticking = true;
         }
     }, { passive: true });
+
+    window.addEventListener('resize', update, { passive: true });
 
     update();
 }
@@ -242,6 +257,7 @@ function initEntryFilters(cardSelector) {
  * Effect 2 — Seattle footer reveal.
  * bg-fixed pins the skyline to the viewport; JS shifts background-position as the
  * footer scrolls into view (blind-reveal). Touch devices fall back to scroll attachment.
+ * Updates run only while the footer is on screen; reduced-motion keeps center 25%.
  */
 function initFooterReveal() {
     const footer = document.querySelector('[data-footer]');
@@ -253,9 +269,24 @@ function initFooterReveal() {
         footer.style.backgroundAttachment = 'scroll';
     }
 
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    let isVisible = false;
     let ticking = false;
 
+    const observer = new IntersectionObserver(
+        ([entry]) => {
+            isVisible = entry.isIntersecting;
+            if (isVisible) update();
+        },
+        { threshold: 0 },
+    );
+    observer.observe(footer);
+
     function update() {
+        ticking = false;
+        if (!isVisible) return;
+
         const rect = footer.getBoundingClientRect();
         const viewH = window.innerHeight;
 
@@ -265,16 +296,16 @@ function initFooterReveal() {
             const pos = 15 + (1 - reveal) * 20;
             footer.style.backgroundPosition = `center ${pos}%`;
         }
-
-        ticking = false;
     }
 
     window.addEventListener('scroll', () => {
         if (!ticking) {
-            window.requestAnimationFrame(update);
+            requestAnimationFrame(update);
             ticking = true;
         }
     }, { passive: true });
+
+    window.addEventListener('resize', update, { passive: true });
 
     update();
 }
