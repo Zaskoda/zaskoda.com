@@ -156,6 +156,49 @@ tabs:
                           field:
                             type: link
                             display: 'Link to source / proof (the org that gave the award)'
+                        -
+                          handle: recognition_type
+                          field:
+                            type: select
+                            display: 'Recognition Type'
+                            instructions: 'What kind of recognition is this? Defaults to standard award if unset.'
+                            options:
+                              award: 'Award / Grant'
+                              feature: 'Feature / Curation'
+                              archive: 'Archive / Preservation'
+                            default: award
+                        -
+                          handle: sub_items
+                          field:
+                            type: replicator
+                            display: Sub-items
+                            sets:
+                              main:
+                                display: Sub-items
+                                sets:
+                                  recognition:
+                                    display: Recognition
+                                    fields:
+                                      -
+                                        handle: title
+                                        field:
+                                          type: text
+                                          display: Title
+                                      -
+                                        handle: source
+                                        field:
+                                          type: text
+                                          display: 'Awarding Body / Source'
+                                      -
+                                        handle: source_url
+                                        field:
+                                          type: link
+                                          display: 'Link to source / proof'
+                                      -
+                                        handle: amount
+                                        field:
+                                          type: text
+                                          display: 'Amount or Prize (if applicable)'
           -
             handle: featured
             field:

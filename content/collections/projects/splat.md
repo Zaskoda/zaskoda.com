@@ -17,6 +17,15 @@ links:
     label: 'Play Online'
     url: 'https://archive.org/details/splat-zaskoda-soft'
     icon: archive
+awards:
+  -
+    type: award
+    enabled: true
+    title: 'Archived in the Internet Archive MS-DOS Games library'
+    year: '2019'
+    source: 'Internet Archive'
+    source_url: 'https://archive.org/details/softwarelibrary_msdos_games'
+    recognition_type: archive
 project_type:
   - game
   - software

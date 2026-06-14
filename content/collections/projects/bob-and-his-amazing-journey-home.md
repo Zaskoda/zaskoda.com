@@ -16,6 +16,22 @@ links:
     label: 'Play Online'
     url: 'https://www.dosgames.com/game/bob-and-his-amazing-journey-home/'
     icon: demo
+awards:
+  -
+    type: award
+    enabled: true
+    title: 'Archived on DOSGames.com — 10,000+ plays'
+    year: '1995'
+    source: 'DOSGames.com'
+    source_url: 'https://www.dosgames.com/'
+    recognition_type: archive
+  -
+    type: award
+    enabled: true
+    title: 'Featured on an Information Society album'
+    year: '1995'
+    source: 'Information Society'
+    recognition_type: feature
 project_type:
   - game
   - software

@@ -26,15 +26,8 @@ awards:
     enabled: true
     title: 'EthDenver 2022 BUIDLathon Award'
     year: '2022'
-    source: 'EthDenver 2022'
-    source_url: 'https://www.ethdenver.com'
-  -
-    type: award
-    enabled: true
-    title: 'Polygon Studios Grant'
-    year: '2022'
     amount: '$500 USD'
-    source: 'Polygon Studios'
+    source: 'Polygon Studios (EthDenver BUIDLathon prize)'
     source_url: 'https://polygon.technology/studios'
 project_type:
   - blockchain

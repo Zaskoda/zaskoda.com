@@ -87,9 +87,21 @@
         <h2 class="section-heading text-xl font-ui font-semibold">Awards &amp; Recognition</h2>
         <ul class="space-y-2 mb-10">
             @foreach ($awards as $award)
+                @php
+                    $subItems = collect($award['sub_items'] ?? [])->filter(fn ($item) => ! empty($item['title']));
+                @endphp
                 <li class="font-ui text-sm text-cowboy-100 pl-4 border-l-2 border-copper-600">
                     {{ $award['title'] }}@if ($award['year'] ?? null) ({{ $award['year'] }})@endif
                     @if ($award['amount'] ?? null) · <span class="metric-highlight">{{ $award['amount'] }}</span> @endif
+                    @if ($subItems->isNotEmpty())
+                        <ul class="mt-2 ml-4 space-y-1">
+                            @foreach ($subItems as $subItem)
+                                <li>
+                                    {{ $subItem['title'] }}@if ($subItem['amount'] ?? null) — <span class="metric-highlight">{{ $subItem['amount'] }}</span>@endif
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
                 </li>
             @endforeach
         </ul>

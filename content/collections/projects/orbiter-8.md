@@ -48,27 +48,38 @@ awards:
   -
     type: award
     enabled: true
-    title: 'First Place — Gaming Category'
+    title: 'Orbiter 8 — Hackathon Wins & Grants'
     year: '2022'
-    amount: '419 MOVR tokens'
-    source: 'Moonriver Grants Hackathon'
-    source_url: 'https://moonriver.moonbeam.network/'
+    sub_items:
+      -
+        type: recognition
+        enabled: true
+        title: 'First Place — Gaming Category'
+        source: 'Moonriver Grants Hackathon'
+        source_url: 'https://moonriver.moonbeam.network/'
+        amount: '419 MOVR tokens'
+      -
+        type: recognition
+        enabled: true
+        title: 'First Place — Bridging Collaboration'
+        source: 'Boba × Moonbeam Bridging Hackathon'
+        source_url: 'https://boba.network/'
+        amount: '$3,500 USD'
+      -
+        type: recognition
+        enabled: true
+        title: 'Polygon Studios Grant'
+        source: 'Polygon Studios'
+        source_url: 'https://polygon.technology/studios'
+        amount: '$5,000 USD'
   -
     type: award
     enabled: true
-    title: 'First Place — Bridging Collaboration'
-    year: '2022'
-    amount: '$3,500 USD'
-    source: 'Boba × Moonbeam Bridging Hackathon'
-    source_url: 'https://boba.network/'
-  -
-    type: award
-    enabled: true
-    title: 'Polygon Studios Grant'
-    year: '2022'
-    amount: '$5,000 USD'
-    source: 'Polygon Studios'
-    source_url: 'https://polygon.technology/studios'
+    title: 'GitHub Arctic Code Vault Contributor'
+    year: '2020'
+    source: 'GitHub'
+    source_url: 'https://archiveprogram.github.com/arctic-vault/'
+    recognition_type: archive
 tech_stack:
   - vue
   - typescript

@@ -19,6 +19,15 @@ links:
     label: 'Play Online'
     url: 'https://modtu.be/?s=Fasttracker+2%2FZaskoda%2Ffestable+in+the+pit.xm'
     icon: demo
+awards:
+  -
+    type: award
+    enabled: true
+    title: 'Archived on Modland'
+    year: '1995'
+    source: 'Modland'
+    source_url: 'https://modland.com/'
+    recognition_type: archive
 project_type:
   - music
 context:

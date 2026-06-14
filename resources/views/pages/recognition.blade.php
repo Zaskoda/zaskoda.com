@@ -71,11 +71,15 @@
                 'source' => $award['source'] ?? null,
                 'source_url' => $linkUrl($award['source_url'] ?? null),
                 'amount' => $award['amount'] ?? null,
+                'recognition_type' => $award['recognition_type'] ?? 'award',
+                'sub_items' => collect($award['sub_items'] ?? [])->values()->all(),
                 'parent' => $parent,
             ]);
         }
     }
     $awards = $awards->sortByDesc(fn ($award) => (int) ($award['year'] ?: 0))->values();
+    $standardAwards = $awards->filter(fn ($award) => ($award['recognition_type'] ?? 'award') !== 'archive')->values();
+    $archiveAwards = $awards->filter(fn ($award) => ($award['recognition_type'] ?? 'award') === 'archive')->values();
 @endphp
 
 {{-- Page header — Surface A --}}
@@ -154,7 +158,7 @@
         @include('partials.section-header', ['title' => 'Awards & Grants'])
 
         <div class="space-y-6 mt-10">
-            @foreach ($awards as $award)
+            @foreach ($standardAwards as $award)
                 <article class="flex flex-col sm:flex-row gap-4 sm:gap-8 surface-card p-6 md:p-8">
                     <div class="font-display font-bold text-4xl text-cowboy-300 shrink-0 w-full sm:w-24">{{ $award['year'] }}</div>
                     <div class="min-w-0">
@@ -176,10 +180,100 @@
                             For:
                             <a href="{{ $award['parent']->url() }}" class="text-copper-400 hover:text-copper-300">{{ $award['parent']->title }}</a>
                         </p>
+                        @php
+                            $subItems = collect($award['sub_items'] ?? [])->filter(fn ($item) => ! empty($item['title']));
+                        @endphp
+                        @if ($subItems->isNotEmpty())
+                            <ul class="mt-4 pt-4 border-t border-cowboy-700 space-y-3">
+                                @foreach ($subItems as $subItem)
+                                    @php
+                                        $subSourceUrl = $linkUrl($subItem['source_url'] ?? null);
+                                    @endphp
+                                    <li>
+                                        <p class="font-ui font-semibold text-cowboy-100 mb-1">{{ $subItem['title'] }}</p>
+                                        @if (! empty($subItem['source']))
+                                            <p class="font-ui text-sm text-cowboy-300 mb-1">
+                                                from
+                                                @if ($subSourceUrl)
+                                                    <a href="{{ $subSourceUrl }}" target="_blank" rel="noopener" class="text-copper-400 hover:text-copper-300">{{ $subItem['source'] }}</a>
+                                                @else
+                                                    {{ $subItem['source'] }}
+                                                @endif
+                                            </p>
+                                        @endif
+                                        @if (! empty($subItem['amount']))
+                                            <p class="font-ui text-sm metric-highlight">{{ $subItem['amount'] }}</p>
+                                        @endif
+                                    </li>
+                                @endforeach
+                            </ul>
+                        @endif
                     </div>
                 </article>
             @endforeach
         </div>
+
+        @if ($archiveAwards->isNotEmpty())
+            <h3 class="font-ui font-semibold text-lg text-cowboy-100 mb-4 mt-12">Archives &amp; Preservation</h3>
+            <p class="font-ui text-sm text-cowboy-300 mb-6 max-w-2xl">
+                Work that's been preserved by independent archives — long after the platforms that hosted it moved on.
+            </p>
+            <div class="space-y-6">
+                @foreach ($archiveAwards as $award)
+                    <article class="flex flex-col sm:flex-row gap-4 sm:gap-8 surface-card p-6 md:p-8">
+                        <div class="font-display font-bold text-4xl text-cowboy-300 shrink-0 w-full sm:w-24">{{ $award['year'] }}</div>
+                        <div class="min-w-0">
+                            <h3 class="font-ui font-semibold text-lg text-cowboy-100 mb-2">{{ $award['title'] }}</h3>
+                            @if ($award['source'])
+                                <p class="font-ui text-sm text-cowboy-300 mb-2">
+                                    from
+                                    @if ($award['source_url'])
+                                        <a href="{{ $award['source_url'] }}" target="_blank" rel="noopener" class="text-copper-400 hover:text-copper-300">{{ $award['source'] }}</a>
+                                    @else
+                                        {{ $award['source'] }}
+                                    @endif
+                                </p>
+                            @endif
+                            @if ($award['amount'])
+                                <p class="font-ui text-sm metric-highlight mb-2">{{ $award['amount'] }}</p>
+                            @endif
+                            <p class="font-ui text-sm text-cowboy-300">
+                                For:
+                                <a href="{{ $award['parent']->url() }}" class="text-copper-400 hover:text-copper-300">{{ $award['parent']->title }}</a>
+                            </p>
+                            @php
+                                $subItems = collect($award['sub_items'] ?? [])->filter(fn ($item) => ! empty($item['title']));
+                            @endphp
+                            @if ($subItems->isNotEmpty())
+                                <ul class="mt-4 pt-4 border-t border-cowboy-700 space-y-3">
+                                    @foreach ($subItems as $subItem)
+                                        @php
+                                            $subSourceUrl = $linkUrl($subItem['source_url'] ?? null);
+                                        @endphp
+                                        <li>
+                                            <p class="font-ui font-semibold text-cowboy-100 mb-1">{{ $subItem['title'] }}</p>
+                                            @if (! empty($subItem['source']))
+                                                <p class="font-ui text-sm text-cowboy-300 mb-1">
+                                                    from
+                                                    @if ($subSourceUrl)
+                                                        <a href="{{ $subSourceUrl }}" target="_blank" rel="noopener" class="text-copper-400 hover:text-copper-300">{{ $subItem['source'] }}</a>
+                                                    @else
+                                                        {{ $subItem['source'] }}
+                                                    @endif
+                                                </p>
+                                            @endif
+                                            @if (! empty($subItem['amount']))
+                                                <p class="font-ui text-sm metric-highlight">{{ $subItem['amount'] }}</p>
+                                            @endif
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            @endif
+                        </div>
+                    </article>
+                @endforeach
+            </div>
+        @endif
     </div>
 </section>
 
@@ -253,16 +347,19 @@
                                             ? \Carbon\Carbon::parse($appearance['date'])->format('F Y')
                                             : null;
                                     @endphp
-                                    <li class="flex flex-wrap items-baseline gap-x-2 gap-y-1">
-                                        <span class="text-cowboy-500">&rarr;</span>
-                                        <span class="text-cowboy-300">
-                                            {{ $appearance['event'] }}@if ($appearanceDate), {{ $appearanceDate }}@endif
-                                        </span>
-                                        @if ($appearanceVideoUrl)
-                                            <a href="{{ $appearanceVideoUrl }}" target="_blank" rel="noopener" class="text-copper-400 hover:text-copper-300">Watch &rarr;</a>
-                                        @endif
+                                    <li>
+                                        <div class="flex flex-wrap items-baseline gap-x-2">
+                                            <span class="text-cowboy-500">&rarr;</span>
+                                            <span class="text-cowboy-300">
+                                                {{ $appearance['event'] }}@if ($appearanceDate), {{ $appearanceDate }}@endif
+                                            </span>
+                                            @if ($appearanceVideoUrl)
+                                                <span class="text-cowboy-500">&nbsp;&mdash;</span>
+                                                <a href="{{ $appearanceVideoUrl }}" target="_blank" rel="noopener" class="text-copper-400 hover:text-copper-300">Watch &rarr;</a>
+                                            @endif
+                                        </div>
                                         @if (! empty($appearance['note']))
-                                            <span class="w-full text-cowboy-500 text-xs">{{ $appearance['note'] }}</span>
+                                            <p class="text-sm text-cowboy-300 mt-1">{{ $appearance['note'] }}</p>
                                         @endif
                                     </li>
                                 @endforeach

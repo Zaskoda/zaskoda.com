@@ -20,9 +20,18 @@ awards:
     enabled: true
     title: 'Apogaea 2011 Creative Grant'
     year: '2011'
-    amount: '$1,000 USD'
+    # Amount unverified — confirm with Scott before re-adding
     source: 'Apogaea, Inc.'
     source_url: 'https://www.apogaea.com'
+    recognition_type: award
+  -
+    type: award
+    enabled: true
+    title: 'Featured in an official Burning Man calendar'
+    year: '2012'
+    source: 'Burning Man Project'
+    source_url: 'https://burningman.org'
+    recognition_type: feature
 project_type:
   - art-installation
   - fabrication
