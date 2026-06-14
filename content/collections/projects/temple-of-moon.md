@@ -14,6 +14,15 @@ links:
     label: 'Flickr Set'
     url: 'https://www.flickr.com/photos/zaskoda/sets/72157625571250565/'
     icon: external
+awards:
+  -
+    type: award
+    enabled: true
+    title: 'Apogaea 2011 Creative Grant'
+    year: '2011'
+    amount: '$1,000 USD'
+    source: 'Apogaea, Inc.'
+    source_url: 'https://www.apogaea.com'
 project_type:
   - art-installation
   - fabrication
