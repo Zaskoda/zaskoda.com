@@ -44,6 +44,7 @@
             <div class="flex gap-4">
                 <a href="/blog" class="font-ui text-sm">&rarr; Blog</a>
                 <a href="/about" class="font-ui text-sm">&rarr; About</a>
+                <a href="/recognition" class="font-ui text-sm">&rarr; Recognition</a>
             </div>
         </div>
     </div>

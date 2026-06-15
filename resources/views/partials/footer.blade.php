@@ -21,8 +21,10 @@
             </p>
 
             <nav class="flex flex-wrap justify-center gap-6 mt-10 mb-8">
+                <a href="/"         class="font-ui text-sm text-cowboy-100 hover:text-copper-400 transition-colors">Home</a>
                 <a href="/work"     class="font-ui text-sm text-cowboy-100 hover:text-copper-400 transition-colors">Work</a>
                 <a href="/projects" class="font-ui text-sm text-cowboy-100 hover:text-copper-400 transition-colors">Projects</a>
+                <a href="/recognition" class="font-ui text-sm text-cowboy-100 hover:text-copper-400 transition-colors">Recognition</a>
                 <a href="/blog"     class="font-ui text-sm text-cowboy-100 hover:text-copper-400 transition-colors">Blog</a>
                 <a href="/about"    class="font-ui text-sm text-cowboy-100 hover:text-copper-400 transition-colors">About</a>
                 <a href="/contact"  class="font-ui text-sm text-cowboy-100 hover:text-copper-400 transition-colors">Contact</a>
