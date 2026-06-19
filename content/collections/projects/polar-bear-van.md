@@ -7,10 +7,19 @@ date: '2009-10-01'
 date_end: '2021-09-01'
 status: archived
 summary: '1987 Ford E250 4x4 built over 12 years: lift, custom cabinetry, propane heat, electrical system, roof tent, rock sliders. 355 forum posts, ~70,000 views. Sold September 2021.'
-hero_image: projects/polar-bear-van-outside.jpg
+hero_image: projects/polar-bear-hero.jpg
 gallery:
-  - projects/polar-bear-van.jpg
+  - projects/polar-bear-van-outside.jpg
   - projects/polar-bear-inside.jpg
+  - projects/polar-bear-van.jpeg
+  - projects/polar-bear-moab.jpg
+  - projects/polar-bear-pnw.jpg
+  - projects/polar-bear-campsight.jpg
+  - projects/polar-bear-bone-tree.jpg
+  - projects/polar-bear-molle-seats.jpg
+  - projects/polar-bear-upholstery.png
+  - projects/polar-bear-cooking.jpg
+  - projects/polar-bear-construction.jpg
 links:
   -
     type: link

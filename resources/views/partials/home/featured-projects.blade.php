@@ -1,3 +1,4 @@
+{{-- Featured projects: keep the count divisible by 2 AND 3 (6, 12, etc.) to avoid orphan cards at the 2-column and 3-column breakpoints. --}}
 @php
     $featuredProjects = \Statamic\Facades\Entry::query()
         ->where('collection', 'projects')

@@ -7,8 +7,9 @@
             </svg>
             <h3 class="font-ui font-semibold text-xl text-cowboy-100 mb-3">Engineer &amp; Maker</h3>
             <p class="font-ui text-sm text-cowboy-100 leading-relaxed mb-6">
-                30 years building on the Internet: games, web platforms, blockchain, and physical
-                things. I've shipped AAA game titles, a decentralized MMO, and a robot named Peon.
+                Thirty years of shipping things on the Internet. Indie and AAA games,
+                distributed systems, web platforms, blockchain experiments, and
+                physical builds. I like the parts where code meets the world.
             </p>
             <div class="flex gap-4">
                 <a href="/work" class="font-ui text-sm">&rarr; Work</a>
@@ -22,9 +23,10 @@
             </svg>
             <h3 class="font-ui font-semibold text-xl text-cowboy-100 mb-3">Community Builder</h3>
             <p class="font-ui text-sm text-cowboy-100 leading-relaxed mb-6">
-                I've been designing, building, and running online communities since before the term
-                existed. 700,000 members at Gaia.com. President of a Burning Man regional org at its
-                most successful year. Forum systems that rehabilitated trolls instead of banning them.
+                Online communities of every shape and size, for thirty years. From
+                early BBSes to a 700,000-member platform at Gaia.com to a Burning Man
+                regional org I helped lead through its biggest year. Communities are
+                built; they don't happen.
             </p>
             <div class="flex gap-4">
                 <a href="/work" class="font-ui text-sm">&rarr; Work</a>
@@ -37,9 +39,9 @@
             </svg>
             <h3 class="font-ui font-semibold text-xl text-cowboy-100 mb-3">Thinker &amp; Writer</h3>
             <p class="font-ui text-sm text-cowboy-100 leading-relaxed mb-6">
-                I've been blogging since 1996, before it was called that. Paid author at CryptoSlate.
-                Presented at SXSW Interactive. Graduate research in Information and Communication
-                Technology for Development.
+                I write about building things, leading people, and the future of
+                decentralized systems. Blogging since 1996, paid author at
+                CryptoSlate, presented at SXSW Interactive.
             </p>
             <div class="flex gap-4">
                 <a href="/blog" class="font-ui text-sm">&rarr; Blog</a>

@@ -34,7 +34,8 @@
             <a
                 href="https://www.flickr.com/photos/zaskoda/2623298793/"
                 class="group relative w-20 h-20"
-                title="I made this boat on a trip to Alaska. Watch it sail."
+                title="I made this boat on a trip to Alaska. See more from the trip."
+                aria-label="I made this boat on a trip to Alaska. See more from the trip."
                 target="_blank"
                 rel="noopener"
             >
@@ -42,10 +43,14 @@
                     <circle cx="40" cy="40" r="38" stroke="currentColor" stroke-width="2" fill="rgba(0,0,0,0.35)" opacity="0.9"/>
                     <polygon points="32,24 60,40 32,56" fill="currentColor" opacity="0.95"/>
                 </svg>
-                <span class="sr-only">I made this boat on a trip to Alaska. Watch it sail.</span>
+                <span class="sr-only">I made this boat on a trip to Alaska. See more from the trip.</span>
             </a>
         </div>
     </div>
+
+    <p class="absolute bottom-16 inset-x-0 z-10 text-center font-ui text-sm text-cowboy-300 px-6">
+        Made in <span class="text-copper-500">❤︎</span> Seattle, Washington
+    </p>
 
     {{-- Solid translucent caption bar: structural bottom edge, mirrors the nav bar --}}
     <div class="absolute inset-x-0 bottom-0 z-10 bg-ink/90 backdrop-blur-sm border-t border-card-border">

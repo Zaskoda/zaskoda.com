@@ -7,6 +7,11 @@ date: '2011-01-01'
 status: completed
 summary: 'Built for Apogaea 2011 in memory of Moon, a Phoenix Asylum founding member. Designed with sketches and SketchUp; volunteers organized before the grant was submitted. Hollow center posts became 14-foot flaming torches at the burn.'
 hero_image: projects/temple-of-moon.jpg
+gallery:
+  - projects/temple-of-moon-sketch.jpg
+  - projects/temple-of-moon-with-other-art.jpeg
+  - projects/temple-of-moon-burning.jpg
+  - projects/temple-of-moon-performance.jpg
 links:
   -
     type: link

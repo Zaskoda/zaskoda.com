@@ -7,6 +7,13 @@ date: '2019-01-01'
 status: active
 summary: 'Browser-based space MMO on the EVM: dynamically generated galaxy, ERC-721 ships and planets, ERC-20 currency with SushiSwap. Unstoppable-code ethos — client runs from hard drive, USB, or IPFS. Deployed across 10+ chains.'
 hero_image: projects/orbiter-8.jpg
+gallery:
+  - projects/orbiter-8-explainer.jpg
+  - projects/orbiter-8-planets.png
+  - projects/orbiter-8-saturn.png
+  - projects/orbiter-8-jump.jpg
+  - projects/orbiter-8-jump-menu.jpeg
+  - projects/orbiter-8-trade.png
 links:
   -
     type: link
