@@ -25,13 +25,12 @@
 
             <figure>
                 <img
-                    src="/assets/photos/home-hawk.jpg"
-                    alt="A hawk perched outdoors in rural country"
+                    src="/assets/photos/koda-and-odin-cropped.jpeg"
+                    alt="Scott Dudley with Odin, his dog"
                     class="inline-photo"
-                    width="800"
-                    height="533"
+                    width="2039"
+                    height="1272"
                 >
-                <figcaption class="inline-photo-caption">Rural roots — high-tech and natural, from the start.</figcaption>
             </figure>
 
             <p>
@@ -98,6 +97,17 @@
                 Egalitarian. Politically independent. I value authenticity over polish, in writing
                 and in behavior, and I try to stay self-aware about my own contradictions.
             </p>
+
+            <figure>
+                <img
+                    src="/assets/photos/home-hawk.jpg"
+                    alt="A hawk perched outdoors in rural country"
+                    class="inline-photo"
+                    width="800"
+                    height="533"
+                >
+                <figcaption class="inline-photo-caption">Rural roots — high-tech and natural, from the start.</figcaption>
+            </figure>
         </div>
     </section>
 

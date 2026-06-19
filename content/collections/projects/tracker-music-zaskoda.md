@@ -1,8 +1,8 @@
 ---
 id: project-tracker-music-zaskoda
 blueprint: project
-title: 'Tracker Music: Zaskoda'
-tagline: 'FastTracker II compositions from high school, still archived in the demoscene''s Modland library.'
+title: 'Tracker Music: Shobek'
+tagline: 'Mid-90s electronic compositions on FastTracker II, released under the artist collective Shobek. One track survives in the demoscene''s Modland archive.'
 date: '1995-01-01'
 status: archived
 summary: 'Electronic music composed in high school on FastTracker II. "Festable in the pit." survives in Modland — 8 channels, 125 BPM. Soundtracked the 2015 Raspberry Pi robot video.'
@@ -34,6 +34,8 @@ context:
   - personal
 ---
 
-Electronic music composed in high school on FastTracker II under the artist name Zaskoda. "Festable in the pit." survives in the Modland archive — 8 channels, 125 BPM, with instrument 14 named "Zaskoda of Shobek."
+In the mid-90s I was part of a music group called Shobek. We released a variety of electronic tracks composed on FastTracker II, the dominant module tracker of that era. Most of those songs are archived in places I can't easily reach anymore.
 
-A track from this era soundtracked the 2015 Raspberry Pi robot video.
+What survives publicly: "Festable in the pit." in the Modland demoscene archive — 8 channels, 125 BPM, with instrument 14 named "Zaskoda of Shobek" embedded in the file. A track from this era also soundtracked my first Raspberry Pi robot video in 2015 — a friend said the music alone could have been a career.
+
+(I'd like to add direct audio downloads here eventually, once I can dig up the rest of the archive.)

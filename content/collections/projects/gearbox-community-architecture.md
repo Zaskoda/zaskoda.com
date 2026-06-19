@@ -7,6 +7,10 @@ date: '2004-01-01'
 date_end: '2007-12-31'
 status: completed
 summary: 'Community systems at Gearbox Software: The Ban Bin forum jail, The Illuminate reward council, Internal Combustion flame forum, Gearblogs developer diaries, and ARG puzzle campaigns.'
+hero_image: projects/gearbox-software-gearboxity-hero.png
+gallery:
+  - projects/gearbox-software-forums.png
+  - projects/bia-sdk-wiki.png
 links:
   -
     type: link

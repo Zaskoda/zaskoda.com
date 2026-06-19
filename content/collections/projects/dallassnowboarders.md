@@ -1,8 +1,8 @@
 ---
 id: project-dallassnowboarders
 blueprint: project
-title: 'DallasSnowboarders.com'
-tagline: 'A community for snowboarders who live nowhere near snow.'
+title: 'Dallas Snowboarders'
+tagline: 'A real community of snowboarders who lived nowhere near snow — organized meetups, planned trips, and a digital home to share the adventures.'
 date: '2006-01-01'
 status: archived
 summary: 'Virtual community for Dallas-area snowboarders: PHPBB forum plus WordPress with custom photo album, calendar, and video mods. 15,000 page loads and 29 users in two weeks.'
@@ -44,6 +44,8 @@ context:
   - personal
 ---
 
-Co-launched a virtual community for the small but growing group of Dallas-area snowboarding enthusiasts: PHPBB forum plus WordPress CMS with custom photo album, calendar, and video mods. 15,000 page loads and 29 registered users in the first two weeks, with regular in-person meetups.
+Dallas Snowboarders was a community I organized for snowboarding enthusiasts in the Dallas area. We met up in person regularly, planned group trips to Colorado and New Mexico, and shared the adventures online through a website and forum.
+
+The digital side ran on PHPBB plus WordPress with custom photo album, calendar, and video mods. The community side ran on getting people together in person, even when there was no snow nearby. The site hit 15,000 page loads and 29 registered users in the first two weeks; the in-person meetups were the actual point.
 
 An answer to the question: how do you build community around an activity that doesn't happen where the people live?

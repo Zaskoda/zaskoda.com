@@ -1,7 +1,7 @@
 ---
 id: project-chromodepth-haunted-house
 blueprint: project
-title: 'Chromodepth Haunted House'
+title: 'Circus of Fear'
 tagline: 'A haunted house where flat paint becomes 3D — chromodepth glasses, blacklight, and perceptual trickery.'
 date: '2011-01-01'
 date_end: '2013-12-31'
@@ -26,6 +26,8 @@ context:
   - festival-burn
 ---
 
-A collaborative Phoenix Asylum installation using chromodepth glasses and blacklight-reactive paints to make flat surfaces shift in depth — a perceptual illusion that plays with how the brain reads color as distance.
+Circus of Fear was a collaborative haunted house installation built by the Phoenix Asylum makerspace community. The central effect used chromodepth glasses — a perceptual technology that uses the brain's reading of color wavelengths to suggest depth — combined with blacklight-reactive paint, so flat painted surfaces appeared to shift and warp in three dimensions. Disorienting and immersive by design.
 
-Awarded a grant to perform at Apogaea and ran for years after. Scott helped build the sets and performed in the haunt.
+Circus of Fear was awarded a grant to perform at Apogaea and ran for several years after. I helped build the sets and performed as a character in the haunt itself.
+
+The project sits at the intersection of several threads I keep returning to: perceptual experience design, physical installation, collaborative making, and live performance.

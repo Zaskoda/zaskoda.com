@@ -29,8 +29,16 @@ achievements:
     text: 'Credited on 20+ shipped titles across web, technology, support, and marketing roles'
 tech_stack:
   - php
+awards:
+  -
+    type: award
+    enabled: true
+    title: 'SXSW Best Online Gaming Site — Nomination'
+    year: '2001'
+    source: 'Gathering of Developers (GodGames.com redesign)'
+    source_url: 'https://www.sxsw.com'
+    recognition_type: award
 related_projects:
-  - project-take-two-cms
   - project-fantasy-origin
 role_focus:
   - engineering

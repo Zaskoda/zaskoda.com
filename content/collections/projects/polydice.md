@@ -7,6 +7,9 @@ date: '2022-01-01'
 status: completed
 summary: 'Tabletop dice-rolling dapp with Rix Studios. Each die is a customizable ERC-721 with on-chain randomization. EthDenver 2022 award winner. Hundreds given away at DygyCon 9.'
 hero_image: projects/polydice.jpg
+gallery:
+  - projects/polydice-screen-1.png
+  - projects/polydice-screen-2.png
 links:
   -
     type: link

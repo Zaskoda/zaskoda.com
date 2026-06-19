@@ -6,6 +6,7 @@ tagline: 'Offline field data collection for a Denver nonprofit fighting the urba
 date: '2013-01-01'
 status: completed
 summary: 'ICTD lab project for Re:Vision International. Deployed ODK Collect for offline community garden data, bilingual documentation, and trained local women on the platform.'
+hero_image: projects/revision.png
 project_type:
   - research
   - software
