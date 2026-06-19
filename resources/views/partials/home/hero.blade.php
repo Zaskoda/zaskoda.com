@@ -9,10 +9,10 @@
 
     <div class="absolute inset-0 overflow-hidden" data-hero-bg>
         <img
-            src="/assets/photos/hero-alaska-boat.jpg"
+            src="/assets/photos/hero-alaska-boat-hd.png"
             alt="A hand-carved wooden boat with a feather sail, held up at the shore in Alaska"
-            width="1600"
-            height="947"
+            width="1539"
+            height="1022"
             fetchpriority="high"
             decoding="async"
             data-hero-img
