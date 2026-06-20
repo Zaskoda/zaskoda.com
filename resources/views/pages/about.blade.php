@@ -20,7 +20,8 @@
                 I grew up in rural Texas with horses, goats, and chickens. My family built the home
                 we lived in during my high school years, from scratch, ourselves. Somewhere in the
                 middle of that I got my first computer: a 486dx33 that could be overclocked to 66mhz
-                with the press of a button.
+                with the press of a button. I immediately got online — posting shareware projects to
+                BBSes, browsing Usenet, and building websites when Mosaic was mainstream.
             </p>
 
             <figure>
@@ -36,14 +37,18 @@
             <p>
                 I started publishing DOS games and composing tracker music in high school under the
                 name Zaskoda Soft, a name borrowed from my great-grandmother's maiden name. My first
-                weekly Web updates went online in August 1996, before anyone called that blogging.
-                I've been building on the Internet ever since: game studio web platforms, communities
-                with hundreds of thousands of members, robots, blockchain games, art installations,
-                and a 12-year van build.
+                weekly Web updates went online in August 1996, before anyone called that blogging —
+                I was writing about indie game development long before the term existed, and eventually
+                worked on AAA titles too. I've launched three companies along the way: a pre-dot-com-bubble
+                web development firm, a social media marketing studio, and a Web3 game studio. I've been
+                building on the Internet ever since: game studio web platforms, communities with hundreds
+                of thousands of members, goofy robots, blockchain games, a climbable art installation
+                we burned at a ceremony, and a 12-year van build.
             </p>
             <p>
                 High-tech and natural. Digital and handmade. I've lived both ends of it: decades
-                writing software in Seattle, and now writing code from Mexico.
+                writing software in Seattle, and these days splitting my time between Seattle and
+                Yucatan, Mexico.
             </p>
         </div>
     </section>

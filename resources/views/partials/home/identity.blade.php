@@ -12,7 +12,7 @@
         </h2>
 
         <p class="font-body text-lg md:text-xl text-cowboy-100 leading-relaxed max-w-xl mx-auto mb-4">
-            My name is Scott WilliamDudley — but my friends call me Koda.   
+            My name is Scott — but my friends call me Koda.   
         </p>          
         <p class="font-body text-lg md:text-xl text-cowboy-100 leading-relaxed max-w-xl mx-auto mb-10">
             <a href="/about">Find out more about me...</a>            
