@@ -145,14 +145,6 @@
         </div>
     </section>
 
-    <section>
-        <h2 class="section-heading text-3xl">Find Me</h2>
-        <p class="body-copy mb-6">
-            Email is best: <a href="mailto:{{ $site_settings['contact_email'] }}">{{ $site_settings['contact_email'] }}</a>.
-            Otherwise I'm zaskoda just about everywhere.
-        </p>
-        @include('partials.social-icons', ['class' => 'gap-5', 'iconClass' => 'w-6 h-6', 'iconSize' => 24])
-    </section>
 </div>
 </div>
 @endsection
