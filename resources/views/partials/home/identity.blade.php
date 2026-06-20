@@ -11,16 +11,11 @@
             Cyberpunk Cowboy
         </h2>
 
+        <p class="font-body text-lg md:text-xl text-cowboy-100 leading-relaxed max-w-xl mx-auto mb-4">
+            My name is Scott WilliamDudley — but my friends call me Koda.   
+        </p>          
         <p class="font-body text-lg md:text-xl text-cowboy-100 leading-relaxed max-w-xl mx-auto mb-10">
-            I'm Scott Dudley — Koda for short. I've been publishing things online
-            since the early 90s, back when "online" mostly meant email and BBSes.
-            Since then: indie and AAA games, blogs before they were called blogs,
-            online communities of every shape and size, robots and tinkering
-            projects, three companies (a pre-dot-com-bubble web dev firm, a social
-            media marketing studio, and a Web3 game studio), a 12-year overland
-            van build, and the occasional turn as a fire spinner. Grew up in
-            rural Texas. Decade in Seattle. Currently splitting time between
-            Seattle and Mexico.
+            <a href="/about">Find out more about me...</a>            
         </p>
 
         <div class="flex justify-center">
