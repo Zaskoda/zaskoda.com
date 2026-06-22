@@ -62,11 +62,32 @@
                 composing tracker music to my identity across social media and just 
                 about anything else online. 
             </p>
+
+            <figure>
+                <img
+                    src="/assets/photos/koda-at-burn.jpg"
+                    alt="Koda petting a dragon art car at Burning Man"
+                    class="inline-photo"
+                    width="768"
+                    height="421"
+                >
+            </figure>
+
             <p>
                 Years later, a patner and I went to Burning Man where she referred to 
                 me - for the first time - as a shortened version of the name: &ldquo;Koda&rdquo;. People overheard her, picked up on it, and decades 
                 later, Koda is what most of my friends call me, and &ldquo;zaskoda&rdquo; is still my handle nearly everywhere online.
             </p>
+
+            <figure>
+                <img
+                    src="/assets/photos/koda-firespinning.jpg"
+                    alt="Koda fire spinning"
+                    class="inline-photo"
+                    width="768"
+                    height="510"
+                >
+            </figure>
         </div>
     </section>
 

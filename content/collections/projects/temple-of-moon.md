@@ -12,6 +12,7 @@ gallery:
   - projects/temple-of-moon-with-other-art.jpeg
   - projects/temple-of-moon-burning.jpg
   - projects/temple-of-moon-performance.jpg
+  - projects/moon-in-calendar.jpg
 links:
   -
     type: link
