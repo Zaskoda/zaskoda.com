@@ -26,11 +26,11 @@
 
             <figure>
                 <img
-                    src="/assets/photos/me-on-horse-02.png"
+                    src="/assets/photos/me-on-horse-02.jpg"
                     alt="Scott Dudley on horseback in rural Texas"
                     class="inline-photo"
-                    width="1124"
-                    height="688"
+                    width="768"
+                    height="470"
                 >
             </figure>
 
@@ -64,11 +64,11 @@
 
             <figure>
                 <img
-                    src="/assets/photos/koda-and-odin-cropped.jpeg"
+                    src="/assets/photos/koda-and-odin-cropped.jpg"
                     alt="Scott Dudley with Odin, his dog"
                     class="inline-photo"
-                    width="2039"
-                    height="1272"
+                    width="768"
+                    height="479"
                 >
             </figure>
 
@@ -104,11 +104,11 @@
 
             <figure>
                 <img
-                    src="/assets/photos/me-with-mohawk.png"
+                    src="/assets/photos/me-with-mohawk.jpg"
                     alt="Scott Dudley with a mohawk"
                     class="inline-photo"
-                    width="1257"
-                    height="764"
+                    width="768"
+                    height="467"
                 >
             </figure>
         </div>
@@ -124,15 +124,15 @@
                 there in 2011.
             </p>
 
-<figure class="mb-0">
-    <img
-        src="/assets/photos/me-snowboarding.png"
-        alt="Scott Dudley snowboarding"
-        class="inline-photo"
-        width="1768"
-        height="890"
-    >
-</figure>
+            <figure class="mb-0">
+                <img
+                    src="/assets/photos/me-snowboarding.jpg"
+                    alt="Scott Dudley snowboarding"
+                    class="inline-photo"
+                    width="768"
+                    height="387"
+                >
+            </figure>
 
 
             <p>
@@ -142,11 +142,11 @@
             </p>
             <figure>
                 <img
-                    src="/assets/photos/me-in-italy.png"
+                    src="/assets/photos/me-in-italy.jpg"
                     alt="Scott Dudley in Italy"
                     class="inline-photo"
-                    width="1681"
-                    height="935"
+                    width="768"
+                    height="427"
                 >
                 <figcaption class="inline-photo-caption">In Italy — another chapter of working from abroad.</figcaption>
             </figure>

@@ -48,9 +48,6 @@
         </div>
     </div>
 
-    <p class="absolute bottom-16 inset-x-0 z-10 text-center font-ui text-sm text-cowboy-300 px-6">
-        Made in <span class="text-copper-500">❤︎</span> Seattle, Washington
-    </p>
 
     {{-- Solid translucent caption bar: structural bottom edge, mirrors the nav bar --}}
     <div class="absolute inset-x-0 bottom-0 z-10 bg-ink/90 backdrop-blur-sm border-t border-card-border">
