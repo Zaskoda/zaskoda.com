@@ -45,9 +45,9 @@
             <p>
                 Although it seemed that building software was a passion for me, it took a lifetime of exploring
                 to realize it wasn't. It was merely what I had to learn in order to express my creativity at 
-                the time. It turns out, I enjoy crafting experiences for others to enjoy. Early on this was 
+                the time. It turns out, I enjoy crafting experiences for others to enjoy - in any medium. Early on this was 
                 games and online communities. But in time, I followed this passion to create music, build art 
-                installations, perform as a fire dancer, and craft unique company cultures.
+                installations, perform as a fire dancer, and craft unique organizational cultures.
             </p>
         </div>
     </section>
