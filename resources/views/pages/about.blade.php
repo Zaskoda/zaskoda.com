@@ -26,11 +26,11 @@
 
             <figure>
                 <img
-                    src="/assets/photos/koda-and-odin-cropped.jpeg"
-                    alt="Scott Dudley with Odin, his dog"
+                    src="/assets/photos/me-on-horse-02.png"
+                    alt="Scott Dudley on horseback in rural Texas"
                     class="inline-photo"
-                    width="2039"
-                    height="1272"
+                    width="1124"
+                    height="688"
                 >
             </figure>
 
@@ -64,13 +64,12 @@
 
             <figure>
                 <img
-                    src="/assets/photos/home-hosting.jpg"
-                    alt="Scott hosting a community workshop"
+                    src="/assets/photos/koda-and-odin-cropped.jpeg"
+                    alt="Scott Dudley with Odin, his dog"
                     class="inline-photo"
-                    width="800"
-                    height="533"
+                    width="2039"
+                    height="1272"
                 >
-                <figcaption class="inline-photo-caption">Community work in the field — training, hosting, building together.</figcaption>
             </figure>
 
             <p>
@@ -105,13 +104,12 @@
 
             <figure>
                 <img
-                    src="/assets/photos/home-hawk.jpg"
-                    alt="A hawk perched outdoors in rural country"
+                    src="/assets/photos/me-with-mohawk.png"
+                    alt="Scott Dudley with a mohawk"
                     class="inline-photo"
-                    width="800"
-                    height="533"
+                    width="1257"
+                    height="764"
                 >
-                <figcaption class="inline-photo-caption">Rural roots — high-tech and natural, from the start.</figcaption>
             </figure>
         </div>
     </section>
@@ -126,22 +124,32 @@
                 there in 2011.
             </p>
 
-            <figure>
-                <img
-                    src="/assets/photos/home-performance.jpg"
-                    alt="Scott performing with fire poi at a festival"
-                    class="inline-photo"
-                    width="800"
-                    height="533"
-                >
-                <figcaption class="inline-photo-caption">Festival life — fire, art, and community off the clock.</figcaption>
-            </figure>
+<figure class="mb-0">
+    <img
+        src="/assets/photos/me-snowboarding.png"
+        alt="Scott Dudley snowboarding"
+        class="inline-photo"
+        width="1768"
+        height="890"
+    >
+</figure>
+
 
             <p>
                 I've documented 24 snowboarding trips, surfed, dived, and ridden downhill mountain
                 bikes. These days I'm living in Mexico, a long way from Silicon Valley and arguably
                 a return to my rural roots in a different form.
             </p>
+            <figure>
+                <img
+                    src="/assets/photos/me-in-italy.png"
+                    alt="Scott Dudley in Italy"
+                    class="inline-photo"
+                    width="1681"
+                    height="935"
+                >
+                <figcaption class="inline-photo-caption">In Italy — another chapter of working from abroad.</figcaption>
+            </figure>
         </div>
     </section>
 
