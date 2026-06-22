@@ -17,7 +17,7 @@
         <h2 class="section-heading text-3xl">Rural Roots</h2>
         <div class="body-copy space-y-4">
             <p>
-                I was born in rural Texas and spent my childhood on the move. My family lived 
+                I was born in rural Texas and spent my childhood on the move. My family lived in  
                 half a dozen states before heading back to Texas for my high school years. I was
                 busy raising horses, goats, and chickens when dad brought home our first computer, a 486dx33. 
                 In my family home, which we built from scratch ourselves, I learned to build software and 
