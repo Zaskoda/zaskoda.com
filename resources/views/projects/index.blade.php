@@ -32,7 +32,7 @@
 
 {{-- Page header — Surface A --}}
 <div class="bg-ink">
-    <div class="max-w-7xl mx-auto px-6 md:px-12 pt-28 pb-16">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 pt-28 pb-8">
         <h1 class="page-heading mb-4">Projects</h1>
         <p class="body-copy text-lg mb-10 max-w-2xl">
             Software, art installations, robots, vehicles, and community platforms. Everything here
@@ -64,7 +64,7 @@
 
 {{-- Project grid — Surface B --}}
 <section class="bg-slate">
-    <div class="max-w-7xl mx-auto px-6 md:px-12 pt-12 pb-20">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 pt-6 pb-20">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         @foreach ($projects as $entry)
             @php

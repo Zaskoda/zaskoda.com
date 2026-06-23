@@ -14,7 +14,7 @@
     <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-ink to-transparent pointer-events-none" aria-hidden="true"></div>
 
     {{-- Content card at the top of the footer; the skyline reveals below it --}}
-    <div class="relative z-10 min-h-screen flex items-start justify-center px-6 pt-24 md:pt-28 pb-12 md:pb-16">
+    <div class="relative z-10 min-h-screen flex items-start justify-center px-6 pt-24 md:pt-28 pb-6 md:pb-16">
         <div class="w-full max-w-2xl bg-ink/85 backdrop-blur-sm border border-card-border rounded-lg px-8 py-10 md:px-12 text-center">
             <p class="font-body italic text-cowboy-100 text-lg leading-relaxed whitespace-pre-line">
                 {{ $site_settings['tagline'] ?? '' }}

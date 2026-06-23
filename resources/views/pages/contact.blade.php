@@ -3,7 +3,7 @@
 @section('content')
 {{-- Page header — Surface A --}}
 <div class="bg-ink">
-    <div class="max-w-2xl mx-auto px-6 pt-28 pb-12 text-center">
+    <div class="max-w-2xl mx-auto px-6 pt-28 pb-6 text-center">
         <h1 class="page-heading mb-6">Make Contact</h1>
         <p class="body-copy text-lg">
             Email works. I read it.
@@ -15,7 +15,7 @@
 
 {{-- Page content — Surface B --}}
 <div class="bg-slate">
-    <div class="max-w-2xl mx-auto px-6 pt-12 pb-20 text-center">
+    <div class="max-w-2xl mx-auto px-6 pt-6 pb-20 text-center">
         <div>
             <a href="mailto:{{ $site_settings['contact_email'] }}" class="btn-cta">
                 {{ $site_settings['contact_email'] }}

@@ -32,7 +32,7 @@
     $allActive = $activeTermSlug === null;
 @endphp
 
-<div class="flex flex-wrap gap-2 mb-12">
+<div class="flex flex-wrap gap-2 mb-2">
     <a
         href="/blog"
         class="font-ui text-xs px-3 py-1.5 rounded border transition-colors {{ $allActive ? 'border-copper-600 text-copper-400 bg-cowboy-700' : 'border-copper-600 text-copper-400' }}"
