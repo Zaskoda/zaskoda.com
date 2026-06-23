@@ -25,6 +25,8 @@ context:
 tech_stack:
   - ruby-on-rails
 ---
-Designed and shipped a custom community platform for Gaiam from the ground up: information architecture, onboarding, and engagement systems, built on Ruby on Rails. The platform reached 700,000+ members in nine months.
+At Gaiam — a lifestyles-of-health-and-sustainability (LOHAS) company — my title was, officially, "Virtual Community Guru." I worked with our team to design and shipped Gaia.com, a community platform from the ground up: information architecture, onboarding, and the engagement systems that keep people coming back, all built on Ruby on Rails.
 
-It was eventually wiped from the Internet after funding was cut — a loss Scott later wrote about in ["Building Community: The Game Changed"](https://zaskoda.com/2010/06/09/building-community-the-game-changed/) (June 2010).
+Leveraing Gaiam's various assets, we reached more than 700,000 members in just nine months.
+
+

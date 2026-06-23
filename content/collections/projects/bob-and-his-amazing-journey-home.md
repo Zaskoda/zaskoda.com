@@ -39,8 +39,7 @@ context:
   - personal
 ---
 
-Bob and His Amazing Journey Home is a Sokoban-style puzzle game: push blocks, avoid lasers, collect keys, reach the exit. Built in high school at 640x480 with 256 colors and PC speaker sound.
+Bob and His Amazing Journey Home is a puzzle game — push blocks, avoid lasers, collect keys, and reach the exit. The game runs at 640x480 with 256 colors and uses PC speaker sound. I built Bob in high school and self-published it under my Zaskoda Soft label.
 
-Self-published under the Zaskoda Soft label and distributed by Soft Disk — the legendary shareware house where id Software got their start. The game was featured on an Information Society album and has accumulated roughly 10,000 plays on DOSGames.com, rated 3.5/5, still playable in-browser via DOSBox.
+It was distributed by Soft Disk, the legendary shareware house where id Software got their start, and somehow ended up featured on an Information Society album. It has accumulated roughly 10,000 plays on DOSGames.com, rated 3.5/5, and is still playable in a browser via DOSBox thirty years later.
 
-Part of the Zaskoda Soft story: the label that started the whole identity.

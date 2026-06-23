@@ -20,4 +20,6 @@ context:
   - personal
 ---
 
-An experimental prototype connecting forum software to an isometric tile map — each tile linked to a thread, and the map's appearance changed with post activity. Social-data-driven world design, years before it was commonplace.
+Isogame was an experiment: what if a forum looked like a place instead of a list? I connected custom forum software to an isometric tile map, where each tile was its own discussion thread and the look of the map changed based on how much people posted. Busy threads and quiet ones literally reshaped the world.
+
+The idea I wrote down at the time was to "evolve and change a virtual world using metrics based on the social habits of the user." That's an ordinary concept now — social activity driving the state of a game world shows up across MMOs and social games. In 2005 it was just a prototype I built because I wanted to see it work.

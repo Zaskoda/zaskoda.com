@@ -48,8 +48,10 @@ featured: true
 featured_order: 3
 ---
 
-Polar Bear was a 1987 Ford E250 4x4 van purchased in South Lake Tahoe in October 2009 and driven 1,500 miles home to Boulder. Over 12 years it became a full overland camper build: 6-8 inch lift, custom cabinetry and kitchen, propane heat, full electrical system with house battery, roof top tent, and rock sliders that once anchored a self-recovery from a ravine.
+Polar Bear is a 1987 Ford E250 4x4 van I bought in South Lake Tahoe in October 2009 and drove 1,500 miles home to Boulder. Over the next 12 years I turned it into a full overland camper: a 6-8 inch lift, custom cabinetry and kitchen, propane heat, a full electrical system with a house battery, a rooftop platform used for tents and gear, and armor such as bumpers and rock sliders strong enough for self-recovery.
 
-The build was documented in exhaustive detail on the Sportsmobile Forum: 355 posts and roughly 70,000 views. Polar Bear went to Burning Man multiple years, overlanded across Colorado and Washington, and served as basecamp for backpacking trips.
+I documented the whole build in exhaustive detail on the Sportsmobile Forum — 355 posts and roughly 70,000 views. Polar Bear went to Burning Man multiple years, overlanded across Colorado and Washington, and served as basecamp for backpacking trips. It almost stopped feeling like a vehicle and started feeling like a pet.
 
-Sold in September 2021. "When I started working on her, I thought she was a piece of art I would one day finish. But now, I see that she was more of a performance art. She created and influenced a lifestyle, a way of living, that I will remember and cherish forever.
+I sold it in September 2021 and last I heard, it was roaming around the countryside in France! What I wrote at the time still sums it up:
+
+> When I started working on her, I thought she was a piece of art I would one day finish. But now, I see that she was more of a performance art. She created and influenced a lifestyle, a way of living, that I will remember and cherish forever.

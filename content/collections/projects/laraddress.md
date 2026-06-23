@@ -26,6 +26,5 @@ context:
   - personal
 ---
 
-A Laravel application for collecting contact info from Facebook friends before leaving the platform — and, more deeply, a replacement for the centralized social graph. Friends create verified contact cards with selective visibility by group. Planned federation meant two friends running their own instances would sync via API.
+laraddress is a Laravel application I built for collecting contact information from my Facebook friends b— and, underneath that, a replacement for the centralized social graph itself. Friends create verified contact cards and choose what each group can see: address, email, birthday, social accounts. The planned federation was the real point: if two friends each ran their own copy, the instances would sync over an API, so your network would belong to you and the people in it, not to a company sitting in the middle.
 
-Built because the software Scott wanted didn't exist. Pairs naturally with the "Leaving Facebook: Why" blog post and the decentralist values section on /about.

@@ -21,4 +21,6 @@ context:
   - festival-burn
 ---
 
-An elaborate costume fabrication project documented in detail on Flickr.
+An elaborate Lucifer costume — hooved boots and all — that I built in the same hands-on spirit as my festival and burn projects. Costumes are their own kind of engineering problem: the thing has to fit a body, survive a hard night of being worn, and read instantly as a character from across a dark field. The hooven boots were the centerpiece giving the whole ensamble a disturbing and unique vibe.
+
+Documented in detail on Flickr.

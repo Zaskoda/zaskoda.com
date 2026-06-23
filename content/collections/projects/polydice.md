@@ -42,6 +42,6 @@ related_work:
   - work-partavate-studios
 ---
 
-PolyDice is a tabletop dice-rolling dapp built in partnership with Rix Studios for EthDenver 2022. Each die is a customizable ERC-721 token with fully on-chain randomization — no off-chain oracle required for the roll.
+PolyDice is a tabletop dice-rolling dapp I built with my founding parter at Partavate Studos in collaboration with Rix Studios for EthDenver 2022. Each die is a customizable ERC-721 token and the roll uses fully on-chain randomization — no off-chain oracle deciding your result.
 
-The project won an award at EthDenver 2022. Hundreds of free PolyDice were given away at DygyCon 9's virtual booth.
+It won an award at EthDenver 2022. We gave away hundreds of free PolyDice at DygyCon 9's virtual booth, enough that I had to write custom scripts just to handle the distribution volume. A small, finished, shipped thing — which, for a hackathon project, is most of the battle.
