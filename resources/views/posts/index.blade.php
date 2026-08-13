@@ -11,7 +11,7 @@
 
 {{-- Page header — Surface A --}}
 <div class="bg-ink">
-    <div class="max-w-3xl mx-auto px-6 pt-28 pb-12">
+    <div class="max-w-3xl mx-auto px-6 pt-28 pb-6">
         <h1 class="page-heading mb-10">Blog</h1>
 
         @include('partials.posts.category-nav')
@@ -22,7 +22,7 @@
 
 {{-- Post list — Surface B --}}
 <section class="bg-slate">
-    <div class="max-w-3xl mx-auto px-6 pt-12 pb-20">
+    <div class="max-w-3xl mx-auto px-6 pt-6 pb-20">
         <div class="space-y-10">
             @foreach ($posts as $post)
                 @include('partials.posts.card', ['post' => $post])

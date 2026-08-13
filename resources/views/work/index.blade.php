@@ -65,7 +65,7 @@
 
 {{-- Page header — Surface A --}}
 <div class="bg-ink">
-    <div class="max-w-5xl mx-auto px-6 md:px-12 pt-28 pb-16">
+    <div class="max-w-5xl mx-auto px-6 md:px-12 pt-28 pb-8">
     <h1 class="page-heading mb-4">Work</h1>
     <p class="body-copy text-lg mb-10 max-w-2xl">
         Thirty years of building: studios, startups, retailers, nonprofits, and a couple of
@@ -110,7 +110,7 @@
 
 {{-- Work history — Surface B --}}
 <section class="bg-slate">
-    <div class="max-w-5xl mx-auto px-6 md:px-12 pt-12 pb-20">
+    <div class="max-w-5xl mx-auto px-6 md:px-12 pt-6 pb-20">
 
     <p class="font-ui text-sm text-cowboy-500 hidden mb-6" data-filter-empty>Nothing matches that combination.</p>
 

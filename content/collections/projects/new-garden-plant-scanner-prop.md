@@ -21,4 +21,6 @@ context:
   - personal
 ---
 
-A plant scanner prop fabricated for the indie sci-fi film New Garden — low-budget practical prop design as part of a broader pattern of building physical objects for film, festivals, and installations.
+A working plant scanner prop I fabricated for New Garden, an indie sci-fi film I also starred in, on the kind of budget where "practical effects" mostly means "make it yourself." The job was to build something that reads as believable future-tech on camera without a studio prop department behind it.
+
+Documented on Hackaday.

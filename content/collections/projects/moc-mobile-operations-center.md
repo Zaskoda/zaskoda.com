@@ -21,4 +21,6 @@ context:
   - personal
 ---
 
-A self-contained field computing platform built on Raspberry Pi: HDMI screen, WiFi, and power in one portable case — designed for environments without traditional infrastructure. Documented on Hackaday with 26 followers.
+The Mobile Operations Center was a self-contained field computer I built into a single portable case: a battery, a Raspberry Pi, an HDMI screen, WiFi, and the peripherals to go with them. The goal was a capable little workstation that works where there's no infrastructure to plug into — no desk, no outlet, no network sitting there waiting for you.
+
+It came out of the same interest that ran through my graduate work: getting useful computing into the places the usual setup doesn't reach. I documented the build on Hackaday, where it picked up 26 followers.

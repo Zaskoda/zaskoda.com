@@ -3,7 +3,7 @@
 @section('content')
 {{-- Page header - Surface A --}}
 <div class="bg-ink">
-    <div class="max-w-3xl mx-auto px-6 pt-28 pb-12">
+    <div class="max-w-3xl mx-auto px-6 pt-28 pb-6">
         <h1 class="page-heading">About</h1>
     </div>
 </div>
@@ -12,7 +12,7 @@
 
 {{-- Page content - Surface B --}}
 <div class="bg-slate">
-<div class="max-w-3xl mx-auto px-6 pt-12 pb-20">
+<div class="max-w-3xl mx-auto px-6 pt-6 pb-20">
     <section class="mb-16">
         <h2 class="section-heading text-3xl">Rural Roots</h2>
         <div class="body-copy space-y-4">

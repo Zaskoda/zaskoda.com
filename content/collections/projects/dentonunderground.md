@@ -6,7 +6,7 @@ tagline: 'Early digital-photo community site for the Denton scene, years before 
 date: '1999-01-01'
 date_end: '2001-03-01'
 status: completed
-summary: 'Local Denton, TX site: shoot event photos with a digital camera, post overnight, people return to find themselves. Predates Flickr. Shut down when Scott moved to Austin, early 2001.'
+summary: 'Local Denton, TX site: shoot event photos on a digital camera, post overnight, people come back to find themselves. Predates Flickr and the whole social-photo wave by years.'
 project_type:
   - software
   - community-platform
@@ -16,8 +16,8 @@ context:
   - professional
 ---
 
-A local community website Scott ran for Denton, TX. The hook: Scott and collaborators went out to venues and events with a digital camera, photographed the crowd, and posted the shots afterward, so people came back to find themselves in the previous night's photos.
+DentonUnderground.com was a local community site I ran for the Denton, TX scene. The hook was simple and, for the time, novel: a few collaborators and I went out to venues and events with a digital camera, shot the crowd, and posted the photos afterward. People came back the next day to find themselves in the previous night's pictures.
 
-Digital cameras were still new and expensive, and the social-photo era was years off, making candid event photos a genuinely fresh draw that built repeat traffic. Predates Flickr (2004) and the whole user-generated-photo wave.
+Digital cameras were still new and expensive then, and the social-photo era was years off. Candid shots of yourself out on the town were a genuinely fresh draw — exactly the kind of repeat traffic that's hard to manufacture. This was well before Flickr (2004) and the whole user-generated-photo wave. One of my earliest experiments in building community around shared experience instead of just content.
 
-Started as Tempest Digital Solutions wound down and Scott returned to GodGames; shut down when he moved to Austin in late 2000/early 2001 — he had just relocated when he spoke at SXSW in March 2001, which anchors the closing date.
+I shut it down when I moved to Austin in early 2001.

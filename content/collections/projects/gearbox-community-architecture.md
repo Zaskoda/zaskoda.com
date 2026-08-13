@@ -31,16 +31,20 @@ context:
   - professional
 ---
 
-A suite of community systems built at Gearbox Software during one of the largest game developer communities of its era.
+At Gearbox Software I oversaw the websites, community, and internal tools for what was then one of the largest, most active game developer communities around. My title kept changing — Community Manager, then Online Architect (the one I put on my own business cards), then Director of Applications, then Director of New Media — but the work stayed the same: design the systems that let a big, rowdy community actually function.
 
-**The Ban Bin** — a forum jail used instead of permanent bans, where violations were stated openly and could be disputed. Only two users were ever jailed twice; none more. Documented in the blog post "The Ban Bin: How Effective Is A Forum Jail?"
+A few of the pieces I built:
 
-**The Illuminate** — a hidden reward forum functioning as an informal community council.
+**The Ban Bin** — a forum jail used instead of permanent bans. When someone crossed a line, they got a thread with their name on it where the violation was stated openly and could be disputed. It worked: only two users were ever jailed twice, and none more than that. I wrote it up in "The Ban Bin: How Effective Is A Forum Jail?"
 
-**Internal Combustion** — a members-only flame forum that turned complaints constructive.
+**Gearboxity** - a news platform dedicated for our active community.
 
-**Gearblogs** — an early developer diary platform.
+**The Illuminate** — a hidden reward forum for trusted members that quietly became an informal community council.
 
-**ARG campaigns** — collaborative puzzle campaigns that unlocked game content.
+**Internal Combustion** — a members-only flame forum that gave complaints a place to go, and turned a surprising number of them constructive.
 
-Built on a custom PHP framework, later migrated to CakePHP. The moderation innovations anticipated rehabilitative systems adopted broadly years later.
+**Gearblogs** — an early developer-diary platform, before that was a common thing studios did.
+
+**ARG campaigns** — collaborative puzzle hunts where the community had to work together to unlock game content.
+
+We initially built all of it on a custom PHP framework I wrote from scratch, then eventually migrated to CakePHP as the scope grew. The rehabilitative moderation ideas in particular kept showing up across the industry years later. 

@@ -33,4 +33,6 @@ context:
   - personal
 ---
 
-A pure arcade mouse game, public domain, with a built-in sprite editor so players could redesign the entire game — an early modding feature. Archived in the Internet Archive's MS-DOS library and still playable in-browser.
+Splat is a pure arcade mouse game with, by design, no objective. The pitch was the tagline: this game has no point, just splatter these little... things. I built it under the Zaskoda Soft label and released it into the public domain.
+
+The part I'm still a little proud of: it shipped with a built-in sprite editor and tools for swapping in your own art via .SET files, so a player could redesign the entire game and make it their own. Modding as a built-in feature, in 1997, in a free game made by a teenager. I uploaded it to the Internet Archive myself years later — it's preserved in the MS-DOS Games library and still playable in a browser.

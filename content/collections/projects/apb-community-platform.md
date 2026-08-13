@@ -16,9 +16,7 @@ context:
 tech_stack:
   - php
 ---
-Led the community web platform for APB: All Points Bulletin at Realtime Worlds, the studio behind Crackdown. A localized, international platform that served as the public face of the game, alongside the official company site, a Facebook game, and other online properties.
-
-Built in CakePHP with vBulletin integration, working with the development team in Dundee, Scotland — including a week on-site in February 2009 to meet the team in person.
+I led the development of the community web platform for APB: All Points Bulletin at Realtime Worlds, the studio behind Crackdown. We built a localized, distributed platform designed to support hundreds of thousnads of concurrent international users by serving as a new portal and townhall for the game's player base. Built with CakePHP integrated with vBulletin, we worked with the development team in Dundee, Scotland to unify user accounts between the platform and the game making for a smooth user experience. 
 
 APB survived its publisher's bankruptcy and still operates today as a free-to-play game.
 

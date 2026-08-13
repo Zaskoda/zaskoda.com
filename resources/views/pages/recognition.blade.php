@@ -84,7 +84,7 @@
 
 {{-- Page header — Surface A --}}
 <div class="bg-ink">
-    <div class="max-w-5xl mx-auto px-6 md:px-12 pt-28 pb-16">
+    <div class="max-w-5xl mx-auto px-6 md:px-12 pt-28 pb-8">
         <h1 class="page-heading mb-4">Recognition</h1>
         <p class="body-copy text-lg mb-10 max-w-2xl">
             Talks I've given, games I've shipped, and grants and awards I've been
@@ -102,7 +102,7 @@
 @include('partials.surface-fade')
 
 {{-- Credits — Surface B --}}
-<section id="credits" class="bg-slate py-16 scroll-mt-20">
+<section id="credits" class="bg-slate py-8 scroll-mt-20">
     <div class="max-w-5xl mx-auto px-6 md:px-12">
         @include('partials.section-header', ['title' => 'Game Credits'])
 
@@ -153,7 +153,7 @@
 @include('partials.surface-fade', ['reverse' => true])
 
 {{-- Awards — Surface A --}}
-<section id="awards" class="bg-ink py-16 scroll-mt-20">
+<section id="awards" class="bg-ink py-8 scroll-mt-20">
     <div class="max-w-5xl mx-auto px-6 md:px-12">
         @include('partials.section-header', ['title' => 'Awards & Grants'])
 
@@ -280,7 +280,7 @@
 @include('partials.surface-fade')
 
 {{-- Talks — Surface B --}}
-<section id="talks" class="bg-slate py-16 scroll-mt-20">
+<section id="talks" class="bg-slate py-8 scroll-mt-20">
     <div class="max-w-5xl mx-auto px-6 md:px-12">
         @include('partials.section-header', ['title' => 'Talks & Appearances'])
 

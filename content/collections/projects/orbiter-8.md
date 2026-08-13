@@ -112,4 +112,6 @@ Orbiter 8 is a decentralized space trading MMO built entirely on the Ethereum Vi
 
 The client is browser-based and deliberately lightweight: anyone can build an alternate client against the same ABI. The whole project is built around the "unstoppable code" ethos. The client can run from a local hard drive, a USB stick, or IPFS, and there are no fees beyond Ethereum gas, by design.
 
+I built Orbiter 8 as a working argument for a worldview I actually hold: the software we depend on shouldn't be something a single company can switch off. Orbiter 8 is the opposite by construction. Once the contracts are deployed, the game keeps running whether I'm around or not.
+
 Deployed and tested on Ropsten, Rinkeby, Polygon, BNB, Arbitrum, Moonriver, Moonbase, Bobabase, and Harmony testnets. The code is archived in the GitHub Arctic Code Vault. Logo and branding by Walter "2" Costinak.

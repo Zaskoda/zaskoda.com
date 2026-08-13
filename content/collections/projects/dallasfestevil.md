@@ -22,6 +22,6 @@ context:
   - professional
 ---
 
-Built on a very limited budget for a previously unsuccessful Dallas haunted house festival: a dynamic site with pages refreshed daily during the event, a custom contact system with strict response-time discipline, an exclusive mailing list club ("R.I.P. All Access") with scavenger hunts and sponsor prizes, a cross-promotion banner exchange, and a 14-album custom photo system that became the major traffic driver.
+I built DallasFestEvil for a Dallas haunted house festival, working with a promoter on a very limited budget against a festival that had flopped the year before. The site refreshed daily with new content during the event and exclusive mailing-list club ("R.I.P. All Access") with online scavenger hunts and sponsor prizes, a cross-promotion banner exchange, and a photo system that turned out to be the biggest traffic driver of all.
 
-The festival succeeded. The case study reads like standard practice — a decade early.
+The festival succeeded. I wrote the whole thing up as a case study afterward. It's basically standard community-marketing practice — written about a decade before that became the standard.

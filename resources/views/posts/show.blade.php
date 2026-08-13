@@ -4,7 +4,7 @@
 <article>
 {{-- Post header — Surface A --}}
 <div class="bg-ink">
-    <div class="max-w-2xl mx-auto px-6 pt-28 pb-10">
+    <div class="max-w-2xl mx-auto px-6 pt-28 pb-5">
     <p class="font-ui text-sm text-cowboy-500 mb-3">{{ $page->date()->format('F j, Y') }}</p>
     @php
         $cats = $page->augmentedValue('categories')->value();
@@ -27,7 +27,7 @@
 
 {{-- Post body — Surface B --}}
 <div class="bg-slate">
-    <div class="max-w-2xl mx-auto px-6 pt-12 pb-20">
+    <div class="max-w-2xl mx-auto px-6 pt-6 pb-20">
     <div class="post-body prose prose-invert font-body text-cowboy-100 leading-relaxed max-w-none">
         {!! $page->augmentedValue('content') !!}
     </div>

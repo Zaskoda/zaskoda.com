@@ -25,7 +25,7 @@
 <article data-lightbox-region>
 {{-- Project header — Surface A --}}
 <div class="bg-ink">
-    <div class="max-w-3xl mx-auto px-6 pt-28 pb-10">
+    <div class="max-w-3xl mx-auto px-6 pt-28 pb-5">
 
     @if ($hero)
         <img src="{{ $hero->url() }}" alt="{{ $entry->title }}" class="w-full aspect-video object-cover rounded-lg border border-cowboy-600 mb-10">
@@ -56,7 +56,7 @@
 
 {{-- Project body — Surface B --}}
 <div class="bg-slate">
-    <div class="max-w-3xl mx-auto px-6 pt-12 pb-20">
+    <div class="max-w-3xl mx-auto px-6 pt-6 pb-20">
 
     <div class="prose prose-invert font-body max-w-none mb-10">
         {!! $entry->augmentedValue('content') !!}
